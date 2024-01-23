@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Esto es para que el titulo de la pestaña se mueva-->
+		<script src="https://kit.fontawesome.com/e00b108020.js"></script>
+		<script language="JavaScript">
+			var TituloFC = "SEDyM      ";
+			var espera = 350;
+			var tiempobarrido = null;
+			function despliegue_title() {
+			document.title = TituloFC;
+			TituloFC = TituloFC.substring(1,TituloFC.length) + TituloFC.charAt(0);
+			tiempobarrido = setTimeout("despliegue_title()",espera);
+										}
+			despliegue_title();
+		</script>
+		<script>
+			function NewWindow(mypage, myname, w, h, scroll)
+			{
+			var winl = (screen.width - w) / 2;
+			var wint = (screen.height - h) / 2;
+			winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+			win = window.open(mypage, myname, winprops)
+			if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+			}
+		</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="icon" href="img/SEDM.png">
+	</head>
+	<body>
+		<div id="inicio">
+			<a href="software.html"><font face="ROG Fonts" size="5" id="siguiente">Ingresar</font></a>
+		</div>
+		<div id="logo1"></div>
+	</body>
+</html>
+<style type="text/css">
+	body{
+		background: url(img/iniciop.png);
+		background-size: 100%;
+		padding: 0vh;
+		position: fixed;
+		animation-name: inicio;
+		animation-duration: 7.8s;
+		animation-iteration-count: 1;
+		animation-play-state: running;
+		animation-direction: alternate-reverse;
+		animation-timing-function: linear;
+	}
+	@keyframes inicio{
+		0%{
+			background: #000;
+			background-size: 100%;
+		}
+		1%{
+			background: url(img/inicio.gif);
+			background-size: 100%;
+		}
+		99%{
+			background: url(img/inicio.gif);
+			background-size: 100%;
+		}
+		100%{
+			background: url(img/iniciop.png);
+			background-size: 100%;
+		}
+	}
+	#siguiente{
+		color: #000;
+		text-align: center;
+		position: fixed;
+		margin-top: 69vh;
+		margin-left: 42.55vw;
+		width: 12vw;
+		height: 6vh;
+		background-color: #fff;
+		border-radius: 25%;
+		animation-name: sig;
+		animation-duration: 6.8s;
+		animation-iteration-count: 1;
+		animation-play-state: running;
+		animation-direction: alternate-reverse;
+		animation-timing-function: linear;
+	}
+	#siguiente:hover{
+		color: #05f;
+		cursor: pointer;
+	}
+	@keyframes sig{
+		0%{
+			background-color: #fff;
+			text-align: center;
+			color: #000;
+			border: 1vh;
+			border-color: #fff;
+			border-radius: 25%;
+		}
+		3%{
+			background-color: transparent;
+			color: transparent;
+			text-align: center;
+		}
+		100%{
+			background-color: transparent;
+			color: transparent;
+			text-align: center;
+		}
+	}
+</style>

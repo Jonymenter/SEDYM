@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<script src="https://kit.fontawesome.com/e00b108020.js"></script>
+			<script language="JavaScript">
+					var TituloFC = "SEDyM      ";
+					var espera = 350;
+					var tiempobarrido = null;
+					function despliegue_title() {
+					document.title = TituloFC;
+					TituloFC = TituloFC.substring(1,TituloFC.length) + TituloFC.charAt(0);
+					tiempobarrido = setTimeout("despliegue_title()",espera);
+												}
+					despliegue_title();
+			</script>
+			<script>
+				function NewWindow(mypage, myname, w, h, scroll)
+				{
+					var winl = (screen.width - w) / 2;
+					var wint = (screen.height - h) / 2;
+					winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+					win = window.open(mypage, myname, winprops)
+					if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+				}
+			</script>
+			<title>JonaTec</title>
+			<link rel="icon" href="img/SEDM.png">
+		</head>
+		<body>
+			<header>
+				<h1><u>SEDyM</u><br><font size="3">Sistema de Estudio Dinamico y Multiusuario</font></h1>
+			</header>
+			<br><br>
+			<div id="login">
+					<div id="campo_usuario">
+						<label for="usuario">Usuario</label>
+						<input type="text" name="usuario" id="usuario" autofocus required>
+						<span class="fas fa-user"></span>
+					</div>
+					<div id="campo_password">
+						<label for="password">Contraseña:</label>
+						<input type="password" id="password" name="password">
+						<span class="far fa-id-card"></span>
+					</div>
+					<br>
+					<a href="intro.html"><button type="submite" id="btn_aceptar" name="btn aceptar" value="1">Aceptar </button></a>
+				</form>
+			</div>
+		</body>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+			@import url('https://fontawesome.com/icons?from=io');
+			body{
+				background: url(img/fondo1.png);
+				background-size: 100%;
+				background-position: center;
+				padding: 0vh;
+				animation-name: fondo;
+				animation-duration: 5s;
+				animation-iteration-count: 1;
+				animation-play-state: running;
+				animation-direction: alternate-reverse;
+				animation-timing-function: linear;
+				color: #aaa;
+				font-family: 'Goldman', cursiva;
+				font-size: 16px;
+			}
+			@keyframes fondo{
+				0%{
+					background: url(img/fondo1.png);
+					background-size: 100%;
+					background-position: center;
+				}
+				100%{
+					background: url(img/fondo2.png);
+					background-size: 100%;
+				}
+			}
+			h1{
+				text-align: right;
+				font-size: 3em;
+				font-style: italic;
+				margin-right: 2em;
+				border-bottom: 10px double #fff;
+			}
+			#btn_aceptar{
+				margin-top: 5%;
+				width: 35%;
+				font-size: .8em;
+				background-color: #000;
+				color: #fff;
+				padding: .2em;
+				cursor: pointer;
+				font-family: ROG Fonts;
+			}
+			#btn_aceptar:hover{
+				width: 36%;
+				margin-top: 4.5%;
+				font-size: .9em;
+				color: yellow;
+			}
+			#login{
+				border: solid 2px #999;
+				margin: 20px auto;
+				padding: 10px;
+				text-align: center;
+				width: 400px;
+				height: 300px;
+				background-color: transparent;
+				box-shadow: 10px 10px 5px 0px rgba(0,0,0,.75);
+				font-size: 1.5em;
+			}
+			#campo_usuario{
+				text-align: center;
+				margin: 1em 0;
+			}
+			.botonretroseso{
+				width: 6.5%;
+				border-style: dashed;
+				border-color: #aaa;
+			}
+
+		</style>
+	</html>

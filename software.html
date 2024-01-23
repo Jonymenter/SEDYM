@@ -1,0 +1,3393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Esto es para que el titulo de la pestaña se mueva-->
+		<script src="https://kit.fontawesome.com/e00b108020.js"></script>
+		<script language="JavaScript">
+			var TituloFC = "SEDyM      ";
+			var espera = 350;
+			var tiempobarrido = null;
+			function despliegue_title() {
+			document.title = TituloFC;
+			TituloFC = TituloFC.substring(1,TituloFC.length) + TituloFC.charAt(0);
+			tiempobarrido = setTimeout("despliegue_title()",espera);
+										}
+			despliegue_title();
+		</script>
+		<script>
+			function NewWindow(mypage, myname, w, h, scroll)
+			{
+			var winl = (screen.width - w) / 2;
+			var wint = (screen.height - h) / 2;
+			winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+			win = window.open(mypage, myname, winprops)
+			if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+			}
+		</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SEDM</title>
+		<link rel="icon" href="img/SEDM.png">
+	</head>
+	<script>
+		alert("Bienvenido usuario verifica que tu zoom sea de 100%");
+	</script>
+	<body>
+		<!---------------------------------------------------Bienvenida----------------------------------------------->
+		<section id="bienvenida">
+			<div id="iceberg"></div>
+			<a id="siguiente" onclick="siguiente()">
+				<font face="ROG Fonts" onclick="siguiente()">SIGUIENTE</font>
+			</a>
+			<div id="burbujas1" class="burbujas"></div>
+			<div id="burbujas2" class="burbujas"></div>
+			<div id="burbujas3" class="burbujas"></div>
+			<div id="burbujas4" class="burbujas"></div>
+			<div id="burbujas5" class="burbujas"></div>
+			<div id="burbujas6" class="burbujas"></div>
+			<div id="image1"></div>
+			<div id="image2"></div>
+			<br>
+			<p class="titulo" id="title"></p>
+		</section>
+		<!--------------------------------------------------Ventanas (v)---------------------------------------------->
+		<section id="inicio" style="display:none">
+			<!--------------------------------------------------Detalles---------------------------------------------->
+			<section>
+				<div id="fondoG"></div>
+				<div id="burbujas1" class="burbujas2"></div>
+				<div id="burbujas2" class="burbujas2"></div>
+				<div id="burbujas3" class="burbujas2"></div>
+				<div id="burbujas4" class="burbujas2"></div>
+				<div id="burbujas5" class="burbujas2"></div>
+				<div id="burbujas6" class="burbujas2"></div>
+			</section>
+			<!-------------------------------------------------Ciencias----------------------------------------------->
+			<div id="cienciasv" style="display:none">
+				<!----------------------------------------------Ciencias 1° parte----------------------------------------->
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec" size="7"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+					<button id="a1" onclick="formales()"></button>
+					<button id="a2" onclick="factuales()"></button>
+				<!------------------------------------------Ciencias 2° parte y botones------------------------------------>
+				<a id="regresarA" onclick="regresarA()" style="display:none">
+					<font face="ROG Fonts">REGRESAR</font>
+				</a>
+				<a id="regresarAA" onclick="regresarAA()" style="display:none">
+					<font face="ROG Fonts">REGRESAR</font>
+				</a>
+				<section id="formales" style="display:none">
+					<a href="ciencias/formales/matematicas/index.html"><button id="aa1"></button></a>
+					<a href="ciencias/formales//index.html"><button id="aa2"></button></a>
+					<a href="ciencias/formales//index.html"><button id="aa3"></button></a>
+				</section>
+				<section id="factuales" class="ab" style="display:none">
+					<button id="ab1" onclick="comunicacion()"></button>
+					<button id="ab2" onclick="psicologia()"></button>
+					<button id="ab3" onclick="naturales()"></button>
+					<a href=""><button id="ab4"></button></a>
+					<a href=""><button id="ab5"></button></a>
+					<a href=""><button id="ab6"></button></a>
+					<a href=""><button id="ab8"></button></a>
+					<a href=""><button id="ab9"></button></a>
+					<a href=""><button id="ab10"></button></a>
+				</section>
+				<!----------------------------------------------Ciencias 3° parte----------------------------------------->
+				<section id="comunicacion" class="aba" style="display:none;">
+					<a href=""><button id="aba1"></button></a>
+					<a href=""><button id="aba2"></button></a>
+					<a href=""><button id="aba3"></button></a>
+					<a href=""><button id="aba4"></button></a>
+					<a href=""><button id="aba5"></button></a>
+					<a href=""><button id="aba6"></button></a>
+					<a href=""><button id="aba7"></button></a>
+					<a href=""><button id="aba8"></button></a>
+					<a href=""><button id="aba9"></button></a>
+					<a href=""><button id="aba10"></button></a>
+					<a href=""><button id="aba11"></button></a>
+				</section>
+				<section id="psicologia" class="abb" style="display:none;">
+					<a href=""><button id="abb1"></button></a>
+					<a href=""><button id="abb2"></button></a>
+					<a href=""><button id="abb3"></button></a>
+					<a href=""><button id="abb4"></button></a>
+				</section>
+				<section id="naturales" class="abc" style="display:none;">
+					<a href=""><button id="abc1"></button></a>
+					<a href=""><button id="abc2"></button></a>
+					<a href=""><button id="abc3"></button></a>
+					<a href=""><button id="abc4"></button></a>
+					<a href=""><button id="abc5"></button></a>
+					<a href=""><button id="abc6"></button></a>
+					<a href=""><button id="abc7"></button></a>
+					<a href=""><button id="abc8"></button></a>
+				</section>
+			</div>
+			<!------------------------------------------------Culturales---------------------------------------------->
+			<div id="culturalesv" style="display:none;">
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+				<button id="b1"></button>
+				<button id="b2"></button><br>
+				<button id="b3"></button><br>
+				<button id="b4"></button>
+			</div>
+			<!----------------------------------------------Especialidades-------------------------------------------->
+			<div id="especialidadesv" style="display:none;">
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+				<section id="c">
+					<button id="c1"></button>
+					<button id="c2"></button>
+					<button id="c3"></button>
+					<button id="c4"></button>
+					<button id="c5"></button>
+					<button id="c6"></button>
+					<button id="c7"></button>
+					<button id="c8"></button>
+					<button id="c9"></button>
+				</section>
+			</div>
+			<!--------------------------------------------------Extras------------------------------------------------>
+			<div id="extrasv" style="display:none;">
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+				<button id="d1"></button>
+				<button id="d2"></button><br>
+				<button id="d3"></button><br>
+				<button id="d4"></button>
+			</div>
+			<!------------------------------------------------Personales---------------------------------------------->
+			<div id="personalesv" style="display:none;">
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+				<a id="regresarE" onclick="regresarE()" style="display:none">
+					<font face="ROG Fonts">REGRESAR</font>
+				</a>
+				<button id="e1" onclick="diario()"></button>
+				<button id="e2" onclick="crecimiento()"></button>
+				<section id="diario" class="ea" style="display:none;">
+					<a href=""><button id="ea1"></button></a>
+					<a href=""><button id="ea2"></button></a>
+					<a href=""><button id="ea3"></button></a>
+					<a href=""><button id="ea4"></button></a>
+				</section>
+				<section id="crecimiento" class="eb" style="display:none;">
+					<a href=""><button id="eb1"></button></a>
+					<a href=""><button id="eb2"></button></a>
+					<a href=""><button id="eb3"></button></a>
+					<a href=""><button id="eb4"></button></a>
+				</section>
+			</div>
+			<!-------------------------------------------------Lenguaje----------------------------------------------->
+			<div id="lenguajev" style="display:none;">
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+				<section id="f0">
+					<button id="f1"></button>
+					<button id="f2"></button>
+					<button id="f3"></button>
+					<button id="f4"></button>
+					<button id="f5"></button>
+					<button id="f6"></button>
+				</section>
+			</div>
+			<!--------------------------------------------------Físicos----------------------------------------------->
+			<div id="fisicosv" style="display:none;">
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+				<button id="g1"></button>
+				<button id="g2"></button>
+			</div>
+			<!--------------------------------------------------Idiomas----------------------------------------------->
+			<div id="idiomasv" style="display:none;">
+				<a onclick="regresar()" class="regresar"></a>
+				<div class="header">
+					<span id="span1"><font face="Neonrec"><b>Sistema Educativo Dinámico y Multiusuario</b></font></span>
+				</div>
+				<section id="h0">
+					<button id="h1"></button>
+					<button id="h2"></button>
+					<button id="h3"></button>
+					<button id="h4"></button>
+					<button id="h5"></button>
+					<button id="h6"></button>
+					<button id="h7"></button>
+				</section>
+			</div>
+			<!---------------------------------------------------Inicio----------------------------------------------->
+			<section>
+				<section id="lineaspunteadas">
+					<div class="pequeno" id="cg1"></div>
+					<div class="grande" id="cp2"></div>
+					<div class="pequeno" id="cg3"></div>
+					<div class="grande" id="cp4"></div>
+					<div class="pequeno" id="cg5"></div>
+					<div class="grande" id="cp6"></div>
+					<div class="pequeno" id="cg7"></div>
+					<div class="pequeno" id="cg8"></div>
+					<div class="grande" id="cp9"></div>
+					<div class="pequeno" id="cg10"></div>
+					<div class="grande" id="cp11"></div>
+					<div class="pequeno" id="cg12"></div>
+					<div class="grande" id="cp13"></div>
+					<div class="pequeno" id="cg14"></div>
+					<div class="pequeno" id="cp15"></div>
+					<div class="grande" id="cg16"></div>
+					<div class="pequeno" id="cp17"></div>
+					<div class="grande" id="cg18"></div>
+					<div class="pequeno" id="cp19"></div>
+					<div class="grande" id="cg20"></div>
+					<div class="pequeno" id="cp21"></div>
+					<div class="pequeno" id="cp22"></div>
+					<div class="grande" id="cg23"></div>
+					<div class="pequeno" id="cp24"></div>
+					<div class="grande" id="cg25"></div>
+					<div class="pequeno" id="cp26"></div>
+					<div class="pequeno" id="cp27"></div>
+					<div class="grande" id="cg28"></div>
+					<div class="pequeno" id="cp29"></div>
+					<div class="grande" id="cg30"></div>
+					<div class="pequeno" id="cp31"></div>
+					<div class="pequeno" id="cp32"></div>
+					<div class="grande" id="cg33"></div>
+					<div class="pequeno" id="cp34"></div>
+					<div class="grande" id="cg35"></div>
+					<div class="pequeno" id="cp36"></div>
+					<div class="grande" id="cg37"></div>
+					<div class="pequeno" id="cp38"></div>
+					<div class="pequeno" id="cp39"></div>
+					<div class="grande" id="cg40"></div>
+					<div class="pequeno" id="cp41"></div>
+					<div class="grande" id="cg42"></div>
+					<div class="pequeno" id="cp43"></div>
+					<div class="grande" id="cg44"></div>
+					<div class="pequeno" id="cp45"></div>
+					<div class="pequeno" id="cp46"></div>
+					<div class="grande" id="cg47"></div>
+					<div class="pequeno" id="cp48"></div>
+					<div class="grande" id="cg49"></div>
+					<div class="pequeno" id="cp50"></div>
+					<div class="grande" id="cg51"></div>
+					<div class="pequeno" id="cp52"></div>
+				</section>
+				<div id="logoinicio">
+					<div id="logosedm"></div>
+				</div>
+				<section id="general">
+					<a id="ciencias" onclick="ciencias()"></a>
+					<a id="ciencias2" onclick="ciencias()"></a>
+				</section>
+				<section id="general">
+					<a id="culturales" onclick="culturales()"></a>
+					<a id="culturales2" onclick="culturales()"></a>
+				</section>
+				<section id="general">
+					<a id="especialidades" onclick="especialidades()"></a>
+					<a id="especialidades2" onclick="especialidades()"></a>
+				</section>
+				<section id="general">
+					<a id="extras" onclick="extras()"></a>
+					<a id="extras2" onclick="extras()"></a>
+				</section>
+				<section id="general">
+					<a id="personales" onclick="personales()"></a>
+					<a id="personales2" onclick="personales()"></a>
+				</section>
+				<section id="general">
+					<a id="lenguaje" onclick="lenguaje()"></a>
+					<a id="lenguaje2" onclick="lenguaje()"></a>
+				</section>
+				<section id="general">
+					<a id="fisicos" onclick="fisicos()"></a>
+					<a id="fisicos2" onclick="fisicos()"></a>
+				</section>
+				<section id="general">
+					<a id="idiomas" onclick="idiomas()"></a>
+					<a id="idiomas2" onclick="idiomas()"></a>
+				</section>
+			</section>
+		</section>
+	</body>
+</html>
+<!-------------------------------------CSS----------------------------------->
+<!--------------Bienvenida--------------->
+<section>
+	<style type="text/css">
+		body{
+			background: url(img/fondo1.png);
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 0vh;
+			animation-name: fondo;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		button:hover{
+			cursor: pointer;
+			opacity: .7;
+		}
+		@keyframes fondo{
+			0%{
+				background: url(img/fondo1.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			100%{
+				background: url(img/fondo2.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		br{
+			width: .1vw;
+			height: .1vh;
+		}
+		#iceberg{
+			width: 85vw;
+			height: 60vh;
+			background: url(img/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: fixed;
+			margin-top: 42vh;
+			margin-left: 13vh;
+			animation-name: iceberg;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		@keyframes iceberg{
+			0%{
+				width: 85vw;
+				height: 60vh;
+				background: url(img/2.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			100%{
+				width: 85vw;
+				height: 60vh;
+				background: url(img/1.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+		#image1{
+			width: 36vw;
+			height: 55vh;
+			background: url(img/a2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			margin-top: -2vh;
+			margin-left: -1vw;
+			padding: 0vh;
+			position: absolute;
+			animation-name: image1;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}	
+		@keyframes image1{
+			0%{
+				width: 36vw;
+				height: 55vh;
+				background: url(img/a2.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			100%{
+				width: 36vw;
+				height: 55vh;
+				background: url(img/a1.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+		#image2{
+			margin-top: -2vh;
+			margin-left: 68.5vw;
+			padding: 0vh;
+			width: 31vw;
+			height: 64vh;
+			background: url(img/b2.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			position: absolute;
+			animation-name: image2;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}		
+		@keyframes image2{
+			0%{
+				width: 31vw;
+				height: 64vh;
+				background: url(img/b2.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			100%{
+				width: 31vw;
+				height: 64vh;
+				background: url(img/b1.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+		#siguiente{
+			font-size: 1.5vw;
+			color: #fff;
+			text-align: center;
+			position: fixed;
+			margin-top: 65vh;
+			margin-left: 45vw;
+			width: 12vw;
+			height: 6vh;
+			background-color: #000;
+			border-radius: 25%;
+			animation-name: sig;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		#siguiente:hover{
+			color: yellow;
+			cursor: pointer;
+		}
+		@keyframes sig{
+			0%{
+				background-color: #000;
+				text-align: center;
+				color: #fff;
+				border: 1vh;
+				border-color: #fff;
+				border-radius: 25%;
+			}
+			100%{
+				background-color: transparent;
+				color: transparent;
+				text-align: center;
+			}
+		}
+		.burbujas{
+			background-color: #4C53D2;
+			border-radius: 100%;
+			position: absolute;
+			bottom: 0;
+			animation: animarburbujas 4s linear infinite ;
+		}
+		.burbujas:nth-child(1){
+			width: 5vw;
+			height: 10vh;
+			left: 1vw;
+			animation-duration: 4s;
+			position: absolute;
+		}
+		.burbujas:nth-child(2){
+			width: 4vw;
+			height: 6vh;
+			left: 25vw;
+			animation-duration: 8s;
+		}
+		.burbujas:nth-child(3){
+			width: 9vw;
+			height: 13vh;
+			left: 40vw;
+			animation-duration: 5s;
+		}
+		.burbujas:nth-child(4){
+			width: 11vw;
+			height: 17vh;
+			left: 50vw;
+			animation-duration: 10s;
+		}
+		.burbujas:nth-child(5){
+			width: 10vw;
+			height: 16vh;
+			left: 65vh;
+			animation-duration: 6.5s;
+		}
+		.burbujas:nth-child(6){
+			width: 8vw;
+			height: 12vh;
+			left: 85vw;
+			animation-duration: 7s;
+		}
+		@keyframes animarburbujas{
+			0% {
+				width: 0;
+				height: 0;
+			}
+			3% {
+				width: 40px;
+				height: 37px;
+			}
+			50%{
+				margin-left: 20px;
+				opacity: 0.5;
+				background: #860B11;
+			}
+			100%{
+				transform: rotate(90deg);
+				bottom: 100vh;
+				background: #750A0F;
+			}
+		}
+		.titulo{
+			position: relative;
+			height: 30vh;
+			background: url(img/l3.png);
+			background-size: 40%;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding-top: 10vh;
+			text-align: center;
+			font-family: Copperplate Gothic Bold;
+			color: #00AAC3;
+			animation: titulo 2s linear infinite alternate-reverse;
+			font-size: 20vh;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		@keyframes titulo{
+			0%{
+				height: 30vh;
+				background: url(img/l3.png);
+				background-size: 40%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			70%{
+				height: 30vh;
+				background: url(img/l2.png);
+				background-size: 40%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			100%{
+				height: 30vh;
+				background: url(img/l1.png);
+				background-size: 40%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			to{
+				margin-top: 6vh;
+			}
+		}
+	</style>
+</section>
+<!----------------Inicio----------------->
+<section>
+	<style type="text/css">
+		#fondoG{
+			opacity: .3;
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			background: url(img/fondoG.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 55%;
+			animation-name: fondoG;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes fondoG{
+			0%{
+			opacity: 1;
+			background-size: 0%;
+			}
+			25%{
+				opacity: .5;
+				background-size: 55%;
+			}
+			50%{
+				opacity: 0;
+				background-size: 100%;
+			}
+			75%{
+				opacity: .6;
+			}
+			100%{
+			opacity: .3;
+			background-size: 55%;
+			}
+		}
+		@keyframes puntoverde{
+			0%{
+			opacity: 0;
+			border: .2vw solid #51C224;
+			background: #fff;
+			}
+			25%{
+				opacity: 1;
+			}
+			50%{
+				opacity: 1;
+			}
+			75%{
+				opacity: 1;
+			}
+			100%{
+			opacity: 0;
+			border: .2vw solid #fff;
+			background: #51C224;
+			}
+		}
+		@keyframes puntonaranja{
+			0%{
+			opacity: 0;
+			border: .2vw solid #fff;
+			background: #FF6600;
+			}
+			25%{
+				opacity: 1;
+			}
+			50%{
+				opacity: 1;
+			}
+			75%{
+				opacity: 1;
+			}
+			100%{
+			opacity: 0;
+			border: .2vw solid #FF6600;
+			background: #fff;
+			}
+		}
+		@keyframes puntomorado{
+			0%{
+			opacity: 0;
+			border: .2vw solid #fff;
+			background: #AD05FF;
+			}
+			25%{
+				opacity: 1;
+			}
+			50%{
+				opacity: 1;
+			}
+			75%{
+				opacity: 1;
+			}
+			100%{
+			opacity: 0;
+			border: .2vw solid #AD05FF;
+			background: #fff;
+			}
+		}
+		@keyframes puntorojo{
+			0%{
+			opacity: 0;
+			border: .2vw solid #fff;
+			background: #D5002E;
+			}
+			25%{
+				opacity: 1;
+			}
+			50%{
+				opacity: 1;
+			}
+			75%{
+				opacity: 1;
+			}
+			100%{
+			opacity: 0;
+			border: .2vw solid #D5002E;
+			background: #fff;
+			}
+		}
+		#cg1{
+			margin-top: 15vh;
+			margin-left: 22vw;
+			animation-name: puntoverde;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp2{
+			margin-top: 14.5vh;
+			margin-left: 24.5vw;
+			animation-name: puntoverde;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg3{
+			margin-top: 15vh;
+			margin-left: 27.5vw;
+			animation-name: puntoverde;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp4{
+			margin-top: 14.5vh;
+			margin-left: 30vw;
+			animation-name: puntoverde;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg5{
+			margin-top: 15vh;
+			margin-left: 33vw;
+			animation-name: puntoverde;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp6{
+			margin-top: 14.5vh;
+			margin-left: 35.5vw;
+			animation-name: puntoverde;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg7{
+			margin-top: 15vh;
+			margin-left: 38.5vw;
+			animation-name: puntoverde;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg8{
+			margin-top: 37vh;
+			margin-left: 23vw;
+			animation-name: puntonaranja;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp9{
+			margin-top: 34.8vh;
+			margin-left: 25.5vw;
+			animation-name: puntonaranja;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg10{
+			margin-top: 33.5vh;
+			margin-left: 28.5vw;
+			animation-name: puntonaranja;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp11{
+			margin-top: 31.3vh;
+			margin-left: 31vw;
+			animation-name: puntonaranja;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg12{
+			margin-top: 30.1vh;
+			margin-left: 34vw;
+			animation-name: puntonaranja;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp13{
+			margin-top: 27.8vh;
+			margin-left: 36.5vw;
+			animation-name: puntonaranja;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg14{
+			margin-top: 26.5vh;
+			margin-left: 39.5vw;
+			animation-name: puntonaranja;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp15{
+			margin-top: 58vh;
+			margin-left: 27vw;
+			animation-name: puntomorado;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg16{
+			margin-top: 54.6vh;
+			margin-left: 29.3vw;
+			animation-name: puntomorado;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp17{
+			margin-top: 52.2vh;
+			margin-left: 32vw;
+			animation-name: puntomorado;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg18{
+			margin-top: 48.5vh;
+			margin-left: 34.3vw;
+			animation-name: puntomorado;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp19{
+			margin-top: 46.4vh;
+			margin-left: 37.2vw;
+			animation-name: puntomorado;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg20{
+			margin-top: 43vh;
+			margin-left: 39.5vw;
+			animation-name: puntomorado;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp21{
+			margin-top: 41vh;
+			margin-left: 42vw;
+			animation-name: puntomorado;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp22{
+			margin-top: 72vh;
+			margin-left: 39.47vw;
+			animation-name: puntorojo;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg23{
+			margin-top: 66vh;
+			margin-left: 40.5vw;
+			animation-name: puntorojo;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp24{
+			margin-top: 60.7vh;
+			margin-left: 42vw;
+			animation-name: puntorojo;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg25{
+			margin-top: 54vh;
+			margin-left: 43.1vw;
+			animation-name: puntorojo;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp26{
+			margin-top: 48vh;
+			margin-left: 44.8vw;
+			animation-name: puntorojo;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp27{
+			margin-top: 72vh;
+			margin-left: 59.4vw;
+			animation-name: puntoverde;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg28{
+			margin-top: 66vh;
+			margin-left: 57.98vw;
+			animation-name: puntoverde;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp29{
+			margin-top: 60.7vh;
+			margin-left: 56.9vw;
+			animation-name: puntoverde;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg30{
+			margin-top: 54vh;
+			margin-left: 55.38vw;
+			animation-name: puntoverde;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp31{
+			margin-top: 48vh;
+			margin-left: 54.1vw;
+			animation-name: puntoverde;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp32{
+			margin-top: 58vh;
+			margin-left: 72.3vw;
+			animation-name: puntonaranja;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg33{
+			margin-top: 54.6vh;
+			margin-left: 69.5vw;
+			animation-name: puntonaranja;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp34{
+			margin-top: 52.2vh;
+			margin-left: 67.2vw;
+			animation-name: puntonaranja;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg35{
+			margin-top: 48.5vh;
+			margin-left: 64.2vw;
+			animation-name: puntonaranja;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp36{
+			margin-top: 46.4vh;
+			margin-left: 62vw;
+			animation-name: puntonaranja;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg37{
+			margin-top: 43vh;
+			margin-left: 59.3vw;
+			animation-name: puntonaranja;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp38{
+			margin-top: 41vh;
+			margin-left: 57.3vw;
+			animation-name: puntonaranja;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp39{
+			margin-top: 37vh;
+			margin-left: 75vw;
+			animation-name: puntomorado;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg40{
+			margin-top: 34.8vh;
+			margin-left: 72vw;
+			animation-name: puntomorado;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp41{
+			margin-top: 33.5vh;
+			margin-left: 69.5vw;
+			animation-name: puntomorado;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg42{
+			margin-top: 31.3vh;
+			margin-left: 66.7vw;
+			animation-name: puntomorado;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp43{
+			margin-top: 30.1vh;
+			margin-left: 64.3vw;
+			animation-name: puntomorado;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg44{
+			margin-top: 27.8vh;
+			margin-left: 61.3vw;
+			animation-name: puntomorado;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp45{
+			margin-top: 26.5vh;
+			margin-left: 59vw;
+			animation-name: puntomorado;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp46{
+			margin-top: 15vh;
+			margin-left: 60vw;
+			animation-name: puntorojo;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg47{
+			margin-top: 14.5vh;
+			margin-left: 62.5vw;
+			animation-name: puntorojo;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp48{
+			margin-top: 15vh;
+			margin-left: 65.5vw;
+			animation-name: puntorojo;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg49{
+			margin-top: 14.5vh;
+			margin-left: 68vw;
+			animation-name: puntorojo;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp50{
+			margin-top: 15vh;
+			margin-left: 71vw;
+			animation-name: puntorojo;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cg51{
+			margin-top: 14.5vh;
+			margin-left: 73.5vw;
+			animation-name: puntorojo;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#cp52{
+			margin-top: 15vh;
+			margin-left: 76.5vw;
+			animation-name: puntorojo;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		.grande{
+			position: absolute;
+			border-radius: 100%;
+			height: 2vw;
+			width: 2vw;
+		}
+		.pequeno{
+			position: absolute;
+			border-radius: 100%;
+			height: 1.5vw;
+			width: 1.5vw;
+		}
+		a:hover{
+			cursor: pointer;
+			opacity: .7;
+		}
+		.burbujas2{
+			position: fixed;
+			background-color: #4C53D2;
+			border-radius: 100%;
+			bottom: 0;
+			animation: animarburbujas2 4s linear infinite ;
+		}
+		.burbujas2:nth-child(1){
+			position: fixed;
+			width: 5vw;
+			height: 10vh;
+			left: 1vw;
+			animation-duration: 4s;
+		}
+		.burbujas2:nth-child(2){
+			position: fixed;
+			width: 4vw;
+			height: 6vh;
+			left: 25vw;
+			animation-duration: 8s;
+		}
+		.burbujas2:nth-child(3){
+			position: fixed;
+			width: 9vw;
+			height: 13vh;
+			left: 40vw;
+			animation-duration: 5s;
+		}
+		.burbujas2:nth-child(4){
+			position: fixed;
+			width: 11vw;
+			height: 17vh;
+			left: 50vw;
+			animation-duration: 10s;
+		}
+		.burbujas2:nth-child(5){
+			position: fixed;
+			width: 10vw;
+			height: 16vh;
+			left: 65vh;
+			animation-duration: 6.5s;
+		}
+		.burbujas2:nth-child(6){
+			position: fixed;
+			width: 8vw;
+			height: 12vh;
+			left: 85vw;
+			animation-duration: 7s;
+		}
+		@keyframes animarburbujas2{
+			1% {
+				width: 0;
+				height: 0;
+				background: #51C224;
+			}
+			19% {
+				background: #51C224;
+			}
+			25% {
+				width: 40px;
+				height: 37px;
+				background: #FF6600;
+			}
+			50%{
+				margin-left: 20px;
+				opacity: 0.5;
+				background: #AD05FF;
+			}
+			100%{
+				transform: rotate(90deg);
+				bottom: 100vh;
+				background: #D5002E;
+			}
+		}
+		#inicio{
+			margin: -.51vw;
+			position: initial;
+			width: 100vw;
+			height: 100vh;
+			background-size: 100%;
+			background-position: center;
+			padding: 0vh;
+			animation-name: fondo2;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		@keyframes fondo2{
+			0%{
+				background: url(img/fondo.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: bottom;
+			}
+			100%{
+				background: url(img/fondo.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		#logoinicio{
+			background: url(img/inicio.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			position: absolute;
+			margin-top: 12vh;
+			margin-left: 42vw;
+			width: 17vw;
+			height: 37vh;
+			animation-name: logoinicio;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes logoinicio{
+			0%{
+				opacity: 0;
+				background-size: 20%;
+				background-repeat: no-repeat;
+				background-position: left;
+			}
+			50%{
+				opacity: .6;
+				background: url(img/inicioB.png);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 35%;
+			}
+			75%{
+				opacity: .5;
+				background: url(img/inicioA.png);
+				background-repeat: no-repeat;
+				background-size: 70%;
+				background-position: right;
+			}
+			100%{
+				opacity: 1;
+				background: url(img/inicio.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+			}
+		}
+		#logosedm{
+			margin-left: -.5vw;
+			width: 18vw;
+			height: 19vh;
+			position: fixed;
+			background: url(img/l3.png);
+			background-size: 100%;
+			animation-name: logosedm;
+			animation-duration: 2.5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes logosedm{
+			0%{
+				opacity: 0;
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			50%{
+				opacity: 1;
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			75%{
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			100%{
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+		/*--------------------------------------------------------Materias inicio--------------------------------*/
+		#general:hover{
+			cursor: pointer;
+			opacity: .7;
+		}
+		#ciencias{
+			margin-top: 5vh;
+			margin-left: 10vw;
+			position: absolute;
+			background: url(img/ciencias.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: ciencias;
+			animation-duration: 1s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes ciencias{
+			0%{
+				transform: translateX(250%) translateY(50%);
+				opacity: 0;
+				background: url(img/ciencias.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			50%{
+				opacity: .5;
+				background: url(img/ciencias.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/ciencias.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		#lenguaje{
+			margin-top: 30.7vh;
+			margin-left: 11vw;
+			position: absolute;
+			background: url(img/lenguaje.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: lenguaje;
+			animation-duration: 1.2s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes lenguaje{
+			0%{
+				opacity: 0;
+			}
+			16.666666%{
+				transform: translateX(243%) translateY(-53%);
+				opacity: 0;
+				background: url(img/lenguaje.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			41.666666%{
+				opacity: .5;
+				background: url(img/lenguaje.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/lenguaje.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		#especialidades{
+			margin-top: 56vh;
+			margin-left: 15.5vw;
+			position: fixed;
+			background: url(img/especialidades.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: especialidades;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes especialidades{
+			0%{
+				opacity: 0;
+			}
+			16.66666666%{
+				transform: translateX(243%) translateY(-156%);
+				opacity: 0;
+				background: url(img/especialidades.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			66.6666666%{
+				opacity: .5;
+				background: url(img/especialidades.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/especialidades.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		#idiomas{
+			margin-top: 73vh;
+			margin-left: 29vw;
+			position: fixed;
+			background: url(img/idiomas.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: idiomas;
+			animation-duration: 1.8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes idiomas{
+			0%{
+				opacity: 0;
+			}
+			16.66666666%{
+				transform: translateX(120%) translateY(-200%);
+				opacity: 0;
+				background: url(img/idiomas.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			66.6666666%{
+				opacity: .5;
+				background: url(img/idiomas.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/idiomas.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		#personales{
+			margin-top: 73vh;
+			margin-left: 59.5vw;
+			position: fixed;
+			background: url(img/personales.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: personales;
+			animation-duration: 2.1s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes personales{
+			0%{
+				opacity: 0;
+			}
+			16.66666666%{
+				transform: translateX(-140%) translateY(-180%);
+				opacity: 0;
+				background: url(img/personales.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			66.6666666%{
+				opacity: .5;
+				background: url(img/personales.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/personales.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		#culturales{
+			margin-top: 56vh;
+			margin-left: 73.5vw;
+			position: fixed;
+			background: url(img/culturales.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: culturales;
+			animation-duration: 2.4s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+
+		}
+		@keyframes culturales{
+			0%{
+				opacity: 0;
+			}
+			16.66666666%{
+				transform: translateX(-243%) translateY(-156%);
+				opacity: 0;
+				background: url(img/culturales.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			66.6666666%{
+				opacity: .5;
+				background: url(img/culturales.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/culturales.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		#fisicos{
+			margin-top: 30.7vh;
+			margin-left: 76.9vw;
+			position: fixed;
+			background: url(img/fisicos.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: fisicos;
+			animation-duration: 2.7s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes fisicos{
+			0%{
+				opacity: 0;
+			}
+			16.666666%{
+				transform: translateX(-257%) translateY(-53%);
+				opacity: 0;
+				background: url(img/fisicos.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			41.666666%{
+				opacity: .5;
+				background: url(img/fisicos.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/fisicos.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		#extras{
+			margin-top: 5vh;
+			margin-left: 79vw;
+			position: fixed;
+			background: url(img/extras.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: extras;
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes extras{
+			0%{
+				opacity: 0;
+			}
+			16.666666%{
+				transform: translateX(-257%) translateY(40%);
+				opacity: 0;
+				background: url(img/extras.png);
+				background-size: 10%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			41.666666%{
+				opacity: .3;
+				background: url(img/extras.png);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			100%{
+				transform: translateX(0%) translateY(0%);
+				opacity: 1;
+				background: url(img/extras.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+		}
+		@keyframes animaciongeneral{
+			0%{
+				opacity: 0;
+			}
+			50%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 1;
+			}
+		}
+		#ciencias2{
+			margin-top: 5vh;
+			margin-left: 10vw;
+			position: fixed;
+			background: url(img/ciencias2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#lenguaje2{
+			margin-top: 30.7vh;
+			margin-left: 11vw;
+			position: fixed;
+			background: url(img/lenguaje2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 2.4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#especialidades2{
+			margin-top: 56vh;
+			margin-left: 15.5vw;
+			position: fixed;
+			background: url(img/especialidades2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#idiomas2{
+			margin-top: 73vh;
+			margin-left: 29vw;
+			position: fixed;
+			background: url(img/idiomas2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 3.6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#personales2{
+			margin-top: 73vh;
+			margin-left: 59.5vw;
+			position: fixed;
+			background: url(img/personales2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 4.2s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#culturales2{
+			margin-top: 56vh;
+			margin-left: 73.5vw;
+			position: fixed;
+			background: url(img/culturales2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 4.8s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+
+		}
+		#fisicos2{
+			margin-top: 30.7vh;
+			margin-left: 76.9vw;
+			position: fixed;
+			background: url(img/fisicos2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 5.4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#extras2{
+			margin-top: 5vh;
+			margin-left: 79vw;
+			position: fixed;
+			background: url(img/extras2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 12vw;
+			height: 25.5vh;
+			border: 0px;
+			animation-name: animaciongeneral;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+	</style>
+</section>
+<!---------------Ventanas---------------->
+<section>
+	<style type="text/css">
+		#cienciasv{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(81, 194, 36, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(0, 169, 77, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(0, 23, 26, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#culturalesv{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(255, 153, 0, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(255, 103, 0, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(255, 74, 0, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#especialidadesv{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(167, 7, 255, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(119, 27, 255, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(36, 0, 152, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#extrasv{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(228, 34, 74, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(219, 0, 58, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(156, 0, 23, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#personalesv{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(81, 194, 36, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(0, 169, 77, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(0, 23, 26, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#lenguajev{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(255, 153, 0, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(255, 103, 0, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(255, 74, 0, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#fisicosv{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(167, 7, 255, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(119, 27, 255, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(36, 0, 152, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#idiomasv{
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(228, 34, 74, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(219, 0, 58, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(156, 0, 23, 1), rgba(0, 0, 255, 0) 70.71%);
+		}
+		#span1{
+			margin-left: 5vw;
+			width: 78vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #000;
+			border-right: .4vw solid;
+			animation: typing 5s steps(43),
+			blink .5s infinite step-end alternate;
+			overflow: hidden;
+		}
+		@keyframes typing {
+			from {width: 0}
+		}
+		@keyframes blink {
+			50% { border-color:transparent; }
+		}
+		#regresarA{
+			position: fixed;
+			font-size: 1.5vw;
+			color: #fff;
+			text-align: center;
+			position: absolute;
+			margin-top: 65vh;
+			margin-left: 2vw;
+			width: 12vw;
+			height: 6vh;
+			background-color: #000;
+			border-radius: 25%;
+		}
+		#regresarA:hover{
+			color: yellow;
+			cursor: pointer;
+		}
+		#regresarAA{
+			position: fixed;
+			font-size: 1.5vw;
+			color: #fff;
+			text-align: center;
+			position: absolute;
+			margin-top: 65vh;
+			margin-left: 2vw;
+			width: 12vw;
+			height: 6vh;
+			background-color: #000;
+			border-radius: 25%;
+		}
+		#regresarAA:hover{
+			color: yellow;
+			cursor: pointer;
+		}
+		#regresarE{
+			position: fixed;
+			font-size: 1.5vw;
+			color: #fff;
+			text-align: center;
+			position: absolute;
+			margin-top: 65vh;
+			margin-left: 2vw;
+			width: 12vw;
+			height: 6vh;
+			background-color: #000;
+			border-radius: 25%;
+		}
+		#regresarE:hover{
+			color: yellow;
+			cursor: pointer;
+		}
+		#factuales{
+			position: absolute;
+		}
+		.header{
+			background: url(img/header.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			height: 16.4vh;
+			width: 90vw;
+			margin-left: 8.5vw;
+			margin-top: -1.2vh;
+			margin-bottom: 0;
+			padding-top: 4vh;
+
+		}
+		.regresar{
+			margin-top: .2vh;
+			margin-left: .2vw;
+			background: url(img/regresar.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: absolute;
+			width: 8.5vw;
+			height: 17vh;
+			border: 0;
+		}
+		.regresar:hover{
+			background: url(img/regresar2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			cursor: pointer;
+			opacity: 1;
+		}
+		/*-----------------------------------------------------------------Ciencias-(a)----------------------------------------------*/
+		#a1{
+			position: absolute;
+			margin-left: 27vw;
+			margin-top: 5vh;
+			background: url(ciencias/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 53vh;
+		}
+		#a2{
+			position: absolute;
+			margin-left: 48.7vw;
+			margin-top: 5vh;
+			background: url(ciencias/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 53vh;
+		}
+		#aa1{
+			margin-left: 18vw;
+			margin-top: 5vh;
+			background: url(ciencias/formales/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 53vh;
+		}
+		#aa2{
+			margin-left: -.5vw;
+			margin-top: 5vh;
+			background: url(ciencias/formales/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 53vh;
+		}
+		#aa3{
+			margin-left: -.5vw;
+			margin-top: 5vh;
+			background: url(ciencias/formales/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 53vh;
+		}
+		.ab{
+			margin-top: -10vh;
+		}
+		#ab1{
+			margin-left: 30vw;
+			background: url(ciencias/factuales/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab2{
+			margin-left: -.5vw;
+			background: url(ciencias/factuales/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab3{
+			margin-left: -.5vw;
+			margin-top: 9.5vh;
+			background: url(ciencias/factuales/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab4{
+			position: absolute;
+			margin-left: -37.89vw;
+			margin-top: 29.48vh;
+			background: url(ciencias/factuales/4.png);
+			background-repeat: no-repeat;
+			background-size: 99.8%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab5{
+			position: absolute;
+			margin-left: -27.12vw;
+			margin-top: 29.48vh;
+			background: url(ciencias/factuales/5.png);
+			background-repeat: no-repeat;
+			background-size: 99.8%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab6{
+			position: absolute;
+			margin-left: -16.4vw;
+			margin-top: 29.4vh;
+			background: url(ciencias/factuales/6.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab7{
+			position: absolute;
+			margin-left: -5.58vw;
+			margin-top: 29.4vh;
+			background: url(ciencias/factuales/7.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab8{
+			position: absolute;
+			margin-left: -32.6vw;
+			margin-top: 49.6vh;
+			background: url(ciencias/factuales/8.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab9{
+			position: absolute;
+			margin-left: -21.8vw;
+			margin-top: 49.6vh;
+			background: url(ciencias/factuales/9.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#ab10{
+			position: absolute;
+			margin-left: -11vw;
+			margin-top: 49.6vh;
+			background: url(ciencias/factuales/10.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		.aba{
+			margin-top: -10vh;
+		}
+		#aba1{
+			margin-left: 30vw;
+			background: url(ciencias/factuales/comunicacion/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba2{
+			margin-left: -.5vw;
+			background: url(ciencias/factuales/comunicacion/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba3{
+			margin-left: -.5vw;
+			margin-top: 9.5vh;
+			background: url(ciencias/factuales/comunicacion/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba4{
+			position: absolute;
+			margin-left: -38vw;
+			margin-top: 29.4vh;
+			background: url(ciencias/factuales/comunicacion/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba5{
+			position: absolute;
+			margin-left: -27.2vw;
+			margin-top: 29.48vh;
+			background: url(ciencias/factuales/comunicacion/5.png);
+			background-repeat: no-repeat;
+			background-size: 99.8%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba6{
+			position: absolute;
+			margin-left: -16.4vw;
+			margin-top: 29.5vh;
+			background: url(ciencias/factuales/comunicacion/6.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba7{
+			position: absolute;
+			margin-left: -5.58vw;
+			margin-top: 29.4vh;
+			background: url(ciencias/factuales/comunicacion/7.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba8{
+			position: absolute;
+			margin-left: -32.6vw;
+			margin-top: 49.6vh;
+			background: url(ciencias/factuales/comunicacion/8.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba9{
+			position: absolute;
+			margin-left: -21.8vw;
+			margin-top: 49.6vh;
+			background: url(ciencias/factuales/comunicacion/9.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#aba10{
+			position: absolute;
+			margin-left: -11vw;
+			margin-top: 49.6vh;
+			background: url(ciencias/factuales/comunicacion/10.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}#aba11{
+			position: absolute;
+			margin-left: -.15vw;
+			margin-top: 49.6vh;
+			background: url(ciencias/factuales/comunicacion/11.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		.abb{
+			margin-top: 5vh;
+			margin-left: 1vw;
+		}
+		#abb1{
+			margin-left: 30vw;
+			background: url(ciencias/factuales/psicologia/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 38.8vh;
+		}
+		#abb2{
+			margin-left: -.5vw;
+			background: url(ciencias/factuales/psicologia/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 38.8vh;
+		}
+		#abb3{
+			margin-left: 37.8vw;
+			margin-top: -9.5vh;
+			background: url(ciencias/factuales/psicologia/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 38.8vh;
+		}
+		#abb4{
+			position: absolute;
+			margin-left: -.2vw;
+			margin-top: -9.5vh;
+			background: url(ciencias/factuales/psicologia/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 38.8vh;
+		}
+		.abc{
+			margin-top: -12vh;
+		}
+		#abc1{
+			margin-left: 30vw;
+			background: url(ciencias/factuales/naturales/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#abc2{
+			margin-left: -.5vw;
+			background: url(ciencias/factuales/naturales/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#abc3{
+			margin-left: -.5vw;
+			margin-top: 9.5vh;
+			background: url(ciencias/factuales/naturales/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#abc4{
+			position: absolute;
+			margin-left: -27.2vw;
+			margin-top: 29.4vh;
+			background: url(ciencias/factuales/naturales/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#abc5{
+			position: absolute;
+			margin-left: -16.4vw;
+			margin-top: 29.4vh;
+			background: url(ciencias/factuales/naturales/5.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#abc6{
+			position: absolute;
+			margin-left: -32.6vw;
+			margin-top: 49.3vh;
+			background: url(ciencias/factuales/naturales/6.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#abc7{
+			position: absolute;
+			margin-left: -21.8vw;
+			margin-top: 49.3vh;
+			background: url(ciencias/factuales/naturales/7.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#abc8{
+			position: absolute;
+			margin-left: -11vw;
+			margin-top: 49.3vh;
+			background: url(ciencias/factuales/naturales/8.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		/*----------------------------------------------------Culturales------------------------------------------------------*/
+		#b1{
+			margin-left: 30vw;
+			background: url(culturales/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#b2{
+			margin-left: -.5vw;
+			background: url(culturales/2.png);
+			background-repeat: no-repeat;
+			background-size:  100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#b3{
+			margin-left: 37.9vw;
+			margin-top: -9.75vh;
+			background: url(culturales/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#b4{
+			position: absolute;
+			margin-left: 53.7vw;
+			margin-top: -39.5vh;
+			background: url(culturales/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		/*Especialidades*/
+		#c{
+			margin-top: -12vh;
+		}
+		#c1{
+			margin-left: 30vw;
+			background: url(especialidades/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c2{
+			margin-left: -.5vw;
+			background: url(especialidades/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c3{
+			margin-left: -.5vw;
+			margin-top: 9.5vh;
+			background: url(especialidades/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c4{
+			position: absolute;
+			margin-left: -27.2vw;
+			margin-top: 30vh;
+			background: url(especialidades/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c5{
+			position: absolute;
+			margin-left: -16.35vw;
+			margin-top: 30vh;
+			background: url(especialidades/5.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c6{
+			position: absolute;
+			margin-left: -5.5vw;
+			margin-top: 30vh;
+			background: url(especialidades/6.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c7{
+			position: absolute;
+			margin-left: -32.6vw;
+			margin-top: 50.4vh;
+			background: url(especialidades/7.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c8{
+			position: absolute;
+			margin-left: -21.76vw;
+			margin-top: 50.4vh;
+			background: url(especialidades/8.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		#c9{
+			position: absolute;
+			margin-left: -10.91vw;
+			margin-top: 50.35vh;
+			background: url(especialidades/9.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 11vw;
+			height: 32vh;
+		}
+		/*Extras*/
+		#d1{
+			margin-left: 30vw;
+			background: url(extras/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#d2{
+			margin-left: -.5vw;
+			background: url(extras/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#d3{
+			margin-left: 37.9vw;
+			margin-top: -9.6vh;
+			background: url(extras/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#d4{
+			position: absolute;
+			margin-left: 53.7vw;
+			margin-top: -39.5vh;
+			background: url(extras/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		/*Personales*/
+		#e1{
+			position: absolute;
+			margin-left: 30vw;
+			margin-top: 5vh;
+			background: url(personales/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 53.5vh;
+		}
+		#e2{
+			position: absolute;
+			margin-left: 51.8vw;
+			margin-top: 5vh;
+			background: url(personales/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 53.5vh;
+		}
+		.ea{
+			margin-top: 5vh;
+			margin-left: 1vw;
+		}
+		#ea1{
+			margin-left: 30vw;
+			background: url(personales/diario/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#ea2{
+			margin-left: -.5vw;
+			background: url(personales/diario/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#ea3{
+			margin-left: 37.9vw;
+			margin-top: -9.5vh;
+			background: url(personales/diario/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#ea4{
+			position: absolute;
+			margin-left: -.3vw;
+			margin-top: -9.5vh;
+			background: url(personales/diario/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		.eb{
+			margin-top: 5vh;
+			margin-left: 1vw;
+		}
+		#eb1{
+			margin-left: 30vw;
+			background: url(personales/crecimiento/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#eb2{
+			margin-left: -.5vw;
+			background: url(personales/crecimiento/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#eb3{
+			margin-left: 37.9vw;
+			margin-top: -9.6vh;
+			background: url(personales/crecimiento/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#eb4{
+			position: absolute;
+			margin-left: -.2vw;
+			margin-top: -9.8vh;
+			background: url(personales/crecimiento/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		/*Lenguaje*/
+		#f0{
+			margin-top: -5vh;
+			margin-left: -7vw;
+		}
+		#f1{
+			margin-left: 30vw;
+			background: url(lenguaje/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#f2{
+			margin-left: -.5vw;
+			background: url(lenguaje/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#f3{
+			margin-left: -.5vw;
+			margin-top: 9.5vh;
+			background: url(lenguaje/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#f4{
+			position: absolute;
+			margin-left: -39.6vw;
+			margin-top: 39.3vh;
+			background: url(lenguaje/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#f5{
+			position: absolute;
+			margin-left: -23.8vw;
+			margin-top: 39.3vh;
+			background: url(lenguaje/5.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#f6{
+			position: absolute;
+			margin-left: -8.1vw;
+			margin-top: 39.3vh;
+			background: url(lenguaje/6.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		/*Fisicos*/
+		#g1{
+			margin-left: 30vw;
+			margin-top: 5vh;
+			background: url(fisicos/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 54vh;
+		}
+		#g2{
+			margin-left: -.5vw;
+			margin-top: 5vh;
+			background: url(fisicos/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 22vw;
+			height: 54vh;
+		}
+		/*Idiomas*/
+		#h0{
+			margin-top: -5vh;
+			margin-left: -12vw;
+		}
+		#h1{
+			margin-left: 30vw;
+			background: url(idiomas/1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#h2{
+			margin-left: -.5vw;
+			background: url(idiomas/2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#h3{
+			margin-left: -.5vw;
+			margin-top: 9.5vh;
+			background: url(idiomas/3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#h4{
+			position: absolute;
+			margin-left: -39.9vw;
+			margin-top: 39.2vh;
+			background: url(idiomas/4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#h5{
+			position: absolute;
+			margin-left: -24.1vw;
+			margin-top: 39.2vh;
+			background: url(idiomas/5.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#h6{
+			position: absolute;
+			margin-left: -8.3vw;
+			margin-top: 39.2vh;
+			background: url(idiomas/6.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+		#h7{
+			margin-left: -.5vw;
+			margin-top: 9.5vh;
+			background: url(idiomas/7.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			border: 0;
+			width: 16vw;
+			height: 39vh;
+		}
+	</style>
+</section>
+<!---------------------------------Javascript-------------------------------->
+<!-----------------Menu------------------>
+<script type="text/javascript">
+	function siguiente(){
+		document.getElementById('bienvenida').style.display = 'none';
+		document.getElementById('inicio').style.display = 'block';
+	}
+	function ciencias(){
+		document.getElementById('cienciasv').style.display = 'block';
+		document.getElementById('a1').style.display = 'block';
+		document.getElementById('a2').style.display = 'block';
+		document.getElementById('comunicacion').style.display = 'none';
+		document.getElementById('psicologia').style.display = 'none';
+		document.getElementById('naturales').style.display = 'none';
+		document.getElementById('formales').style.display = 'none';
+		document.getElementById('factuales').style.display = 'none';
+		document.getElementById('regresarA').style.display = 'none';
+		document.getElementById('regresarAA').style.display = 'none';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';		
+		document.getElementById('logoinicio').style.display = 'none';
+
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+	function culturales(){
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+		document.getElementById('logoinicio').style.display = 'none';
+		document.getElementById('culturalesv').style.display = 'block';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+	function especialidades(){
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+		document.getElementById('logoinicio').style.display = 'none';
+		document.getElementById('especialidadesv').style.display = 'block';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+	function extras(){
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+		document.getElementById('logoinicio').style.display = 'none';
+		document.getElementById('extrasv').style.display = 'block';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+	function personales(){
+		document.getElementById('personalesv').style.display = 'block';
+		document.getElementById('e1').style.display = 'block';
+		document.getElementById('e2').style.display = 'block';
+		document.getElementById('diario').style.display = 'none';
+		document.getElementById('crecimiento').style.display = 'none';
+		document.getElementById('regresarE').style.display = 'none';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';
+
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+		document.getElementById('logoinicio').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+	function lenguaje(){
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+		document.getElementById('logoinicio').style.display = 'none';
+		document.getElementById('lenguajev').style.display = 'block';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+	function fisicos(){
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+		document.getElementById('logoinicio').style.display = 'none';
+		document.getElementById('fisicosv').style.display = 'block';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+	function idiomas(){
+		document.getElementById('ciencias').style.display = 'none';
+		document.getElementById('culturales').style.display = 'none';
+		document.getElementById('especialidades').style.display = 'none';
+		document.getElementById('extras').style.display = 'none';
+		document.getElementById('personales').style.display = 'none';
+		document.getElementById('lenguaje').style.display = 'none';
+		document.getElementById('fisicos').style.display = 'none';
+		document.getElementById('idiomas').style.display = 'none';
+		document.getElementById('logoinicio').style.display = 'none';
+		document.getElementById('idiomasv').style.display = 'block';
+		document.getElementById('fondoG').style.display = 'none';
+		document.getElementById('lineaspunteadas').style.display = 'none';
+
+		document.getElementById('ciencias2').style.display = 'none';
+		document.getElementById('culturales2').style.display = 'none';
+		document.getElementById('especialidades2').style.display = 'none';
+		document.getElementById('extras2').style.display = 'none';
+		document.getElementById('personales2').style.display = 'none';
+		document.getElementById('lenguaje2').style.display = 'none';
+		document.getElementById('fisicos2').style.display = 'none';
+		document.getElementById('idiomas2').style.display = 'none';
+	}
+</script>
+<!-----------Ventanas fase 1------------->
+<script type="text/javascript">
+	function formales(){
+		document.getElementById('formales').style.display = 'block';
+		document.getElementById('regresarA').style.display = 'block';
+		document.getElementById('a1').style.display = 'none';
+		document.getElementById('a2').style.display = 'none';
+		document.getElementById('comunicacion').style.display = 'none';
+		document.getElementById('psicologia').style.display = 'none';
+		document.getElementById('naturales').style.display = 'none';
+	}
+	function factuales(){
+		document.getElementById('regresarA').style.display = 'block';
+		document.getElementById('factuales').style.display = 'block';
+		document.getElementById('a1').style.display = 'none';
+		document.getElementById('a2').style.display = 'none';
+		document.getElementById('comunicacion').style.display = 'none';
+		document.getElementById('psicologia').style.display = 'none';
+		document.getElementById('naturales').style.display = 'none';
+		document.getElementById('regresarAA').style.display = 'none';
+	}
+	function diario(){
+		document.getElementById('diario').style.display = 'block';
+		document.getElementById('regresarE').style.display = 'block';
+		document.getElementById('e1').style.display = 'none';
+		document.getElementById('e2').style.display = 'none';
+	}
+	function crecimiento(){
+		document.getElementById('crecimiento').style.display = 'block';
+		document.getElementById('regresarE').style.display = 'block';
+		document.getElementById('e1').style.display = 'none';
+		document.getElementById('e2').style.display = 'none';
+	}
+</script>
+<!-----------Ventanas fase 2------------->
+<script type="text/javascript">
+	function comunicacion(){
+		document.getElementById('comunicacion').style.display = 'block';
+		document.getElementById('regresarAA').style.display = 'block';
+		document.getElementById('factuales').style.display = 'none';
+		document.getElementById('regresarA').style.display = 'none';
+	}
+	function psicologia(){
+		document.getElementById('psicologia').style.display = 'block';
+		document.getElementById('regresarAA').style.display = 'block';
+		document.getElementById('factuales').style.display = 'none';
+		document.getElementById('regresarA').style.display = 'none';
+	}
+	function naturales(){
+		document.getElementById('naturales').style.display = 'block';
+		document.getElementById('regresarAA').style.display = 'block';
+		document.getElementById('factuales').style.display = 'none';
+		document.getElementById('regresarA').style.display = 'none';
+	}
+</script>
+<!--------------Regresar----------------->
+<script type="text/javascript">
+	function regresar(){
+		document.getElementById('ciencias').style.display = 'block';
+		document.getElementById('culturales').style.display = 'block';
+		document.getElementById('especialidades').style.display = 'block';
+		document.getElementById('extras').style.display = 'block';
+		document.getElementById('personales').style.display = 'block';
+		document.getElementById('lenguaje').style.display = 'block';
+		document.getElementById('fisicos').style.display = 'block';
+		document.getElementById('idiomas').style.display = 'block';
+
+		document.getElementById('ciencias2').style.display = 'block';
+		document.getElementById('culturales2').style.display = 'block';
+		document.getElementById('especialidades2').style.display = 'block';
+		document.getElementById('extras2').style.display = 'block';
+		document.getElementById('personales2').style.display = 'block';
+		document.getElementById('lenguaje2').style.display = 'block';
+		document.getElementById('fisicos2').style.display = 'block';
+		document.getElementById('idiomas2').style.display = 'block';
+
+		document.getElementById('logoinicio').style.display = 'block';
+		document.getElementById('fondoG').style.display = 'block';
+		document.getElementById('lineaspunteadas').style.display = 'block';
+
+		document.getElementById('cienciasv').style.display = 'none';
+		document.getElementById('culturalesv').style.display = 'none';
+		document.getElementById('especialidadesv').style.display = 'none';
+		document.getElementById('extrasv').style.display = 'none';
+		document.getElementById('personalesv').style.display = 'none';
+		document.getElementById('lenguajev').style.display = 'none';
+		document.getElementById('fisicosv').style.display = 'none';
+		document.getElementById('idiomasv').style.display = 'none';
+	}
+	function regresarA(){
+		document.getElementById('a1').style.display = 'block';
+		document.getElementById('a2').style.display = 'block';
+		document.getElementById('regresarA').style.display = 'none';
+		document.getElementById('formales').style.display = 'none';
+		document.getElementById('factuales').style.display = 'none';
+		document.getElementById('comunicacion').style.display = 'none';
+		document.getElementById('psicologia').style.display = 'none';
+		document.getElementById('naturales').style.display = 'none';	
+	}
+	function regresarE(){
+		document.getElementById('e1').style.display = 'block';
+		document.getElementById('e2').style.display = 'block';
+		document.getElementById('regresarE').style.display = 'none';
+		document.getElementById('diario').style.display = 'none';
+		document.getElementById('crecimiento').style.display = 'none';
+	}
+	function regresarAA(){
+		document.getElementById('factuales').style.display = 'block';
+		document.getElementById('regresarA').style.display = 'block';
+		document.getElementById('comunicacion').style.display = 'none';
+		document.getElementById('psicologia').style.display = 'none';
+		document.getElementById('naturales').style.display = 'none';
+		document.getElementById('regresarAA').style.display = 'none';
+	}
+</script>
