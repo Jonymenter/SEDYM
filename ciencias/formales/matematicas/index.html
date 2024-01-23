@@ -1,0 +1,4248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Esto es para que el titulo de la pestaña se mueva-->
+		<section>
+		<script src="https://kit.fontawesome.com/e00b108020.js"></script>
+		<script language="JavaScript">
+			var TituloFC = "SEDyM - Matemáticas      ";
+			var espera = 350;
+			var tiempobarrido = null;
+			function despliegue_title() {
+			document.title = TituloFC;
+			TituloFC = TituloFC.substring(1,TituloFC.length) + TituloFC.charAt(0);
+			tiempobarrido = setTimeout("despliegue_title()",espera);
+										}
+			despliegue_title();
+		</script>
+		<script>
+			function NewWindow(mypage, myname, w, h, scroll)
+			{
+			var winl = (screen.width - w) / 2;
+			var wint = (screen.height - h) / 2;
+			winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+			win = window.open(mypage, myname, winprops)
+			if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+			}
+		</script>
+		</section>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<!--......................................Burbujas.....................................-->
+		<section>
+			<div class="burbujas"></div>
+			<div class="burbujas"></div>
+			<div class="burbujas"></div>
+			<div class="burbujas"></div>
+			<div class="burbujas"></div>
+			<div class="burbujas"></div>
+			<div id="inicio"></div>
+			<a onclick="siguiente()" id="siguiente"><font face="ROG Fonts" size="5">Siguiente</font></a>
+		</section>
+		<!--.....................................Encabezado....................................-->
+		<section id="menu" style="display:none;">
+			<marquee class="encabezado" behavior="alternate" id="header" scrollamount="11">
+				<font face="Neonrec" color="#fff" class="titulo"><b>SEDyM - MATEMÁTICAS</b></font>
+			</marquee>
+		</section>
+		<!------------------------------------------Inicio--------------------------------------->
+		<section>
+			<img id="einstein" src="Einstein.png" style="display: none;">
+			<div id="Integrantes">
+				<span id="span2" style="display:none;"><font face="Copperplate Gothic Bold"><b>"Cuando las leyes de la mátematica se refieren a la realidad, no son ciertas;</b></font></span>
+				<span id="span3" style="display:none;"><font face="Copperplate Gothic Bold"><b> cuando son ciertas no se refieren a la realidad"</b></font></span>
+				<a href="https://www.google.com/search?q=Albert+Einstein&oq=Albert+Einstein&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDsyCggDEAAYsQMYgAQyCggEEAAYsQMYgAQyDQgFEC4YgwEYsQMYgAQyCggGEAAYsQMYgAQyCggHEAAYsQMYgATSAQg0OTM5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank" id="span4" style="display:none;"><font face="Edwardian Script ITC"><b>Albert Einstein</b></font></a>
+				<a id="premium" style="display:none;"></a>
+			</div>
+		</section>
+		<!---------------------------------------Introducción------------------------------------>
+		<section id="introduccion" class="ventanas" style="display:none;">
+			<div id="mate">
+				<h1 class="intro-h1"><font face="Bernard MT Condensed">¿Que significa la palabra matemáticas?</font></h1>
+				<table width="70%" align="center">
+					<tr>
+						<td width="25%"><img src="interrogacion.gif" width="80%" id="img1-intro"></td>
+						<td width="50%" id="parrafo1-intro"><font class="parrafos" face="Forte"><p align="justify">La palabra se origino en Grecia con el nombre de "Mathema", que traducido al latín significa matemáticas y se define como conocimiento. <br><br> Es un conjunto de conocimientos inmutables, es decir conocimientos que no pueden ser cambiados o alterados y se rigen por muchas leyes o reglas.</p></font></td>
+					</tr>
+				</table>
+				<h1 class="intro2-h1"><font face="Bernard MT Condensed">¿Quien invento las matemáticas?</font></h1>
+				<table width="70%" align="center">
+					<th>
+						<td width="50%"><font class="parrafos" face="Forte"><p align="justify">No las invento nadie, el hombre las utilizo desde la mas remota antiguedad por la necesidad de contar y medir con la finalidad de tener conocimiento de sus propiedades y deslindarlas de los demás; especificamente para el pago de impuestos.</p></font></td>
+						<td width="50%"><img src="duda.gif" width="100%" id="img1-intro"></td>
+					</th>
+				</table>
+				<h1 class="intro-h1"><font face="Bernard MT Condensed">¿Porque estudiar matemáticas?</font></h1>
+				<table width="70%" align="center">
+					<th>
+						<td width="30%"><img src="estudiar.gif" width="80%" id="img1-intro"></td>
+						<td width="50%"><font class="parrafos" face="Forte"><p align="justify">Para ser personas criticas y analiticas en la toma de desciciones además de saber resolver problemas</p></font></td>
+					</th>
+				</table>
+			</div>
+		</section>
+		<!----------------------------Menú de las ramas de las Matemáticas----------------------->
+		<section id="temas" class="ventanas" style="display:none;">
+			<button id="a" class="pointer" onclick="a()">Aritmética</button>
+			<button id="b" class="pointer" onclick="b()">Pre-Algebra</button>
+			<button id="c" class="pointer" onclick="c()">Algebra</button>
+			<button id="d" class="pointer" onclick="d()">Geometría Euclidiana</button>
+			<button id="e" class="pointer" onclick="e()">Trigonometría</button>
+			<button id="f" class="pointer" onclick="f()">Geometría Analitica</button>
+			<button id="g" class="pointer" onclick="g()">Calculo Diferencial</button>
+			<button id="h" class="pointer" onclick="h()">Calculo Integral</button>
+			<button id="i" class="pointer" onclick="i()">Probabilidad y Estadistica</button>
+			<button id="j" class="pointer" onclick="j()">Algebra de Boole</button>
+			<button id="k" class="pointer" onclick="k()">Algebra Superior</button>
+			<button id="l" class="pointer" onclick="l()">Calculo Vectorial</button>
+			<button id="m" class="pointer" onclick="m()">Ecuaciones Diferenciales</button>
+			<button id="n" class="pointer" onclick="n()">Metodos Númericos</button>
+			<button id="o" class="pointer" onclick="o()">Lógica</button>
+			<button id="p" class="pointer" onclick="p()">Matemáticas Financieras</button>
+		</section>
+			<!---------------------------Ventanas de menu de los temas--------------------------->
+			<section>
+				<section id="av" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span1"><font face="Goudy Stout"><b>Aritmética</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema1()"><div class="uno">Sistema  de  Numeracion  Decimal</div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema2()"><div class="dos">Valor  Posicional  y  no  Posicional</div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema3()"><div class="uno">Conjuntos</div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema4()"><div class="dos">Propiedades  de  los  Conjuntos</div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema5()"><div class="uno">Propiedades  de  la  igualdad  desigualdad</div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema6()"><div class="dos">7  Operaciones  Basicas</div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema7()"><div class="uno">Fracciones</div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema8()"><div class="dos">Unidades de Medida</div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema9()"><div class="uno">Sistemas  de  Numeracion</div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema10()"><div class="dos">Campo  de  Numeros</div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema11()"><div class="uno">Multiplos  y  Divisores</div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema12()"><div class="dos">Numeros  Primos</div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema13()"><div class="uno">Factorizacion</div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema14()"><div class="dos">Minimo  Comun  Multiplo  y  Maximo  Comun  Divisor</div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema15()"><div class="uno">Porcentajes</div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema16()"><div class="dos">Proporciones</div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema17()"><div class="uno">Operaciones con Numeros Racionales</div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="bv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span5"><font face="Goudy Stout"><b>Pre-Algebra</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema18()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema19()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema20()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema21()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema22()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema23()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema24()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema25()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema26()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema27()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema28()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema29()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema30()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema31()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema32()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema33()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema34()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="cv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span6"><font face="Goudy Stout"><b>Algebra</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema35()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema36()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema37()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema38()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema39()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema40()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema41()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema42()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema43()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema44()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema45()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema46()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema47()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema48()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema49()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema50()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema51()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="dv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span7"><font face="Goudy Stout"><b>Geomtría Euclidiana</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema52()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema53()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema54()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema55()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema56()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema57()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema58()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema59()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema60()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema61()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema62()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema63()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema64()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema65()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema66()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema67()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema68()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="ev" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span8"><font face="Goudy Stout"><b>Trigonometría</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema69()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema70()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema71()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema72()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema73()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema74()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema75()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema76()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema77()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema78()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema79()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema80()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema81()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema82()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema83()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema84()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema85()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="fv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span9"><font face="Goudy Stout"><b>Geometría Analitica</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema86()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema87()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema88()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema89()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema90()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema91()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema92()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema93()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema94()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema95()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema96()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema97()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema98()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema99()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema100()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema101()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema102()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="gv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span10"><font face="Goudy Stout"><b>Calculo Diferencial</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema103()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema104()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema105()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema106()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema107()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema108()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema109()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema110()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema111()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema112()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema113()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema114()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema115()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema116()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema117()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema118()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema119()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="hv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span11"><font face="Goudy Stout"><b>Calculo Integral</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema120()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema121()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema122()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema123()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema124()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema125()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema126()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema127()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema128()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema129()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema130()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema131()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema132()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema133()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema134()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema135()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema136()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="iv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span22"><font face="Goudy Stout"><b>Probabilidad y Estadistica</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema137()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema138()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema139()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema140()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema141()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema142()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema143()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema144()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema145()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema146()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema147()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema148()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema149()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema150()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema151()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema152()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema153()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="jv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span23"><font face="Goudy Stout"><b>Algebra de Boole</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema154()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema155()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema156()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema157()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema158()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema159()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema160()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema161()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema162()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema163()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema164()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema165()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema166()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema167()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema168()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema169()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema170()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="kv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span24"><font face="Goudy Stout"><b>Algebra Superior</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema171()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema172()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema173()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema174()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema175()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema176()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema177()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema178()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema179()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema180()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema181()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema182()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema183()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema184()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema185()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema186()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema187()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="lv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span25"><font face="Goudy Stout"><b>Calculo Vectorial</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema188()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema189()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema190()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema191()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema192()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema193()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema194()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema195()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema196()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema197()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema198()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema199()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema200()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema201()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema202()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema203()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema204()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="mv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span26"><font face="Goudy Stout"><b>Ecuaciones Diferenciales</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema205()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema206()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema207()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema208()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema209()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema210()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema211()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema212()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema213()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema214()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema215()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema216()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema217()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema218()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema219()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema220()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema221()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="nv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span27"><font face="Goudy Stout"><b>Metodos Númericos</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema222()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema223()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema224()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema225()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema226()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema227()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema228()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema229()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema230()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema231()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema232()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema233()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema234()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema235()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema236()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema237()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema238()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="ov" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span28"><font face="Goudy Stout"><b>Lógica</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema239()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema240()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema241()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema242()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema243()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema244()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema245()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema246()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema247()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema248()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema249()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema250()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema251()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema252()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema253()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema254()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema255()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+				<section id="pv" class="ventanas2" style="display:none;">
+					<a onclick="regresaratemas()" class="regresar"></a>
+					<div class="header">
+						<span id="span29"><font face="Goudy Stout"><b>Matemáticas Financieras</b></font></span>
+						<br><br>
+						<h1>
+							<span class="one">1<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema256()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">2<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema257()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">3<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema258()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">4<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema259()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">5<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema260()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">6<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema261()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">7<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema262()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">8<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema263()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">9<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema264()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">10<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema265()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">11<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema266()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">12<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema267()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">13<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema268()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">14<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema269()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">15<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema270()"><div class="uno"></div></font>
+						</h1>
+						<h1>
+							<span class="two">16<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema271()"><div class="dos"></div></font>
+						</h1>
+						<h1>
+							<span class="one">17<font face="ROG Fonts"></font></span>
+							<font face="ROG Fonts" onclick="tema272()"><div class="uno"></div></font>
+						</h1>
+						<br><br>
+					</div>
+				</section>
+			</section>
+				<!---------------------------Ventanas de los temas------------------------------->
+				<section>
+					<section id="tema1" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader1"><font face="Goudy Stout"><b>Sistema  de  Numeracion  Decimal</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema2" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader2"><font face="Goudy Stout"><b>Valor Posicional y no Posicional</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema3" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader3"><font face="Goudy Stout"><b>Conjuntos</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema4" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader4"><font face="Goudy Stout"><b>Propiedades de los Conjuntos</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema5" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader5"><font face="Goudy Stout"><b>Propiedades de la igualdad desigualdad</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema6" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader6"><font face="Goudy Stout"><b>7 Operaciones Basicas</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema7" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader7"><font face="Goudy Stout"><b>Fracciones</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema8" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader8"><font face="Goudy Stout"><b>Unidades de Medida</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema9" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader9"><font face="Goudy Stout"><b>Sistemas de Numeracion</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema10" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader10"><font face="Goudy Stout"><b>Campo de Numeros</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema11" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader11"><font face="Goudy Stout"><b>Multiplos y Divisores</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema12" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader12"><font face="Goudy Stout"><b>Numeros Primos</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema13" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader13"><font face="Goudy Stout"><b>Factorizacion</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema14" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader14"><font face="Goudy Stout"><b>Minimo Comun Multiplo y Maximo Comun Divisor</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema15" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader15"><font face="Goudy Stout"><b>Porcentajes</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema16" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader16"><font face="Goudy Stout"><b>Proporciones</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+					<section id="tema17" class="temasventanas" style="display:none;">
+						<a onclick="regresararitmetica()" class="regresaratemasmuchos"></a>
+						<div class="header">
+							<span class="spanheader17"><font face="Goudy Stout"><b>Operaciones con Numeros Racionales</b></font></span>
+						</div>
+						<section class="subventanas">
+							
+						</section>
+					</section>
+				</section>
+		<!-------------------------------------Planes de Estudio--------------------------------->
+		<section id="planesdeestudio" class="ventanas" style="display:none;">
+			
+		</section>
+		<!-------------------------------------Tips y Trucos------------------------------------->
+		<section id="tipsytrucos" class="ventanas" style="display:none;">
+			
+		</section>
+		<!------------------------------------Datos curiosos------------------------------------->
+		<section id="datoscuriosos" class="ventanas" style="display:none;">
+			
+		</section>
+		<!------------------------------------Historiografía------------------------------------->
+		<section id="historiografia" class="ventanas" style="display:none;">
+			
+		</section>
+		<!-----------------------------------Calculo Mental-------------------------------------->
+		<section id="calculomental" class="ventanas" style="display:none;">
+			
+		</section>
+		<!---------------------------------------Libros------------------------------------------>
+		<section id="libros" class="ventanas" style="display:none;">
+			
+		</section>
+		<!--........................................Menu.......................................-->
+		<section>
+			<div class="menu" id="menu1" style="display: none;">
+				<ol>
+					<img src="10.gif" width="70px" class="logo">
+					<li onclick="inicio()"><button class="linksmenu1"><a onclick="()"><font face="Colonna MT" color="#fff">Inicio</font></a></button></li>
+					<li onclick="introduccion()"><button class="linksmenu2"><a onclick="()"><font face="Colonna MT" color="#fff">Introducción</font></a></button></li>
+					<li onclick="temas()"><button class="linksmenu3"><a onclick="()"><font face="Colonna MT" color="#fff">Temas</font></a></button></li>
+					<li onclick="planesdeestudio()"><button class="linksmenu4"><a onclick="()"><font face="Colonna MT" color="#fff">Planes de Estudio (SE)</font></a></button></li>
+					<li onclick="tipsytrucos()"><button class="linksmenu5"><a onclick="()"><font face="Colonna MT" color="#fff">Tips y Trucos</font></a></button></li>
+					<li onclick="datoscuriosos()"><button class="linksmenu6"><a onclick="()"><font face="Colonna MT" color="#fff">Datos Curiosos</font></a></button></li>
+					<li onclick="historiografia()"><button class="linksmenu7"><a onclick="()"><font face="Colonna MT" color="#fff">Historiografía</font></a></button></li>
+					<li onclick="calculomental()"><button class="linksmenu8"><a onclick="()"><font face="Colonna MT" color="#fff">Calculo Mental</font></a></button></li>
+					<li onclick="libros()"><button class="linksmenu9"><a onclick="()"><font face="Colonna MT" color="#fff">Libros</font></a></button></li>
+				</ol>
+			</div>
+		</section>
+	</body>
+</html>
+<!--_______________________________________________CSS________________________________________________________-->
+<section>
+	<!------------------------------------------Inicio--------------------------------------->
+	<style type="text/css">
+			body{
+				width: 98vw;
+				height: 97vh;
+				background: url(fondo2.gif);
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				padding: 0vh;
+				animation-name: fondo;
+				animation-duration: 1.3333333333333s;
+				animation-iteration-count: 1;
+				animation-play-state: running;
+				animation-direction: alternate-reverse;
+				animation-timing-function: linear;
+			}
+			@keyframes fondo{
+				0%{
+					background: url(fondo.gif);
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+				100%{
+					background: url(fondo.gif);
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+			.burbujas{
+					position: absolute;
+					bottom: 0;
+					animation: animarburbujas 4s linear infinite ;
+			}
+			.burbujas:nth-child(1){
+				width: 0; 
+			    height: 0; 
+	    		border-left: 100px solid #fff;
+		    	border-top: 50px solid transparent;
+	    	 	border-bottom: 50px solid transparent;
+				animation-duration: 4s;
+			}
+			.burbujas:nth-child(2){
+	     		border-left: 100px solid #fff;
+	     		border-top: 50px solid transparent;
+	     		border-bottom: 50px solid transparent;
+				animation-duration: 8s;
+				left: 25%;
+				animation-duration: 8s;
+			}
+			.burbujas:nth-child(3){
+	    		border-left: 100px solid #fff;
+		    	border-top: 50px solid transparent;
+	    	 	border-bottom: 50px solid transparent;
+				left: 40%;
+				animation-duration: 5s;
+			}
+			.burbujas:nth-child(4){
+	     		border-left: 100px solid #fff;
+	     		border-top: 50px solid transparent;
+	     		border-bottom: 50px solid transparent;
+				animation-duration: 8s;
+				left: 50%;
+				animation-duration: 10s;
+			}
+			.burbujas:nth-child(5){
+	    		border-left: 100px solid #fff;
+		    	border-top: 50px solid transparent;
+	    	 	border-bottom: 50px solid transparent;
+				left: 65%;
+				animation-duration: 6.5s;
+			}
+			.burbujas:nth-child(6){
+	     		border-left: 100px solid #fff;
+	     		border-top: 50px solid transparent;
+	     		border-bottom: 50px solid transparent;
+				animation-duration: 8s;
+				left: 85%;
+				animation-duration: 7s;
+			}
+			@keyframes animarburbujas{
+				0% {
+					width: 0;
+					height: 0;
+				}
+				3% {
+					width: 0;
+					height: 0;
+				}
+				50%{
+					margin-left: 20px;
+					opacity: 0.5;
+				}
+				100%{
+					transform: rotate(90deg);
+					bottom: 100vh;
+				}
+			}
+			#inicio{
+				position: absolute;
+				margin-left: 37vw;
+				margin-top: 40vh;
+				background: url(inicio.gif);
+				background-size: 100%;
+				background-position: center;
+				width: 26.5vw;
+				height: 15vh;
+				border-radius: 1vw;
+			}
+			#siguiente{
+			color: #000;
+			text-align: center;
+			position: fixed;
+			margin-top: 69vh;
+			margin-left: 44vw;
+			width: 12vw;
+			height: 6vh;
+			background-color: #fff;
+			border-radius: 25%;
+			animation-name: sig;
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+			}
+			#siguiente:hover{
+				color: #05f;
+				cursor: pointer;
+			}
+			@keyframes sig{
+				0%{
+					background-color: #fff;
+					text-align: center;
+					color: #000;
+					border: 1vh;
+					border-color: #fff;
+					border-radius: 25%;
+				}
+				50%{			
+					background-color: transparent;
+					color: transparent;
+					text-align: center;
+				}
+				100%{			
+					background-color: transparent;
+					color: transparent;
+					text-align: center;
+				}
+			}
+	</style>
+	<!-------------------------------------------Menu---------------------------------------->
+	<style type="text/css">
+		#header{
+			position: fixed;
+			margin-top: -1.5vh;
+			margin-left: -.49vw;
+			width: 99.3vw;
+			height: 15vh;
+			border: .4vw;
+			border-radius: 1vw;
+			border-color: #fff;
+			border-style: groove;
+			animation-name: siu;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		@keyframes siu{
+			0%{
+				background: url(menu1.png);
+				background-size: 100%;
+				background-position: center;
+			}
+			25%{
+				background: url(menu2.png);
+				background-size: 100%;
+				background-position: center;
+			}
+			50%{
+				background: url(menu3.png);
+				background-size: 100%;
+				background-position: center;
+			}
+			75%{
+				background: url(menu4.png);
+				background-size: 100%;
+				background-position: center;
+			}
+			100%{
+				background: url(menu5.png);
+				background-size: 100%;
+				background-position: center;
+			}
+		}
+		.linksmenu1{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 6em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 3em;
+		}
+		.linksmenu1:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 165%;
+			width: 6em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu2{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 10em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 10em;
+		}
+		.linksmenu2:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 99%;
+			width: 10em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu3{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 6em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 20em;
+		}
+		.linksmenu3:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 165%;
+			width: 6em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu4{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 10em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 26em;
+		}
+		.linksmenu4:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 100%;
+			width: 10em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu5{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 10em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 36em;
+		}
+		.linksmenu5:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 100%;
+			width: 10em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu6{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 10em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 46em;
+		}
+		.linksmenu6:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 100%;
+			width: 10em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu7{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 10em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 56em;
+		}
+		.linksmenu7:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 100%;
+			width: 10em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu8{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 10em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 66em;
+		}
+		.linksmenu8:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 100%;
+			width: 10em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.linksmenu9{
+			background: transparent;
+			font-size: 1.1vw;
+			margin-top: -2vh;
+			width: 6em;
+			height: 5em;
+			border: 0;
+			position: absolute;
+			margin-left: 76em;
+		}
+		.linksmenu9:hover{
+			position: fixed;
+			background: url(boton.png);
+			background-size: 165%;
+			width: 6em;
+			height: 9em;
+			padding-bottom: 4.1em;
+			text-decoration: overline;
+			text-decoration-color: #8A9597;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		.logo{
+			width: 5vw;
+			border-radius: 100%;
+			position: absolute;
+			margin-left: -3vw;
+			margin-top: -1vh;
+		}
+		#menu1{
+			position: fixed;
+		}
+		.menu{	
+			position: fixed;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 99vw;
+			height: 13vh;
+			background: rgba(0, 0, 0, .8);
+			margin-left: -1vw;
+			margin-top: 15vh;
+			padding: 0;
+			padding-left: 2em;
+		}
+		.menu ol li{
+			display: inline;
+			padding: 0;
+		}
+		.menu ol li a{
+			color: #a1a;
+			text-decoration: none;
+			font: Impact;
+			cursor: pointer;
+			font-size: 1.4em;
+		}
+		.titulo{
+			font-size: 6vw;
+		}
+	</style>
+	<!------------------------------------------Inicio--------------------------------------->
+	<style type="text/css">
+		#einstein{
+			position: fixed;
+			width: 33.3vw;
+			margin-left: -.5vw;
+			margin-top: 30.5vh;
+			animation-name: einstein;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		#Integrantes{
+			position: fixed;
+			margin-top: 70vh;
+			margin-left: 50vw;
+		}
+		#premium{
+			position: fixed	;
+			margin-left: 33vw;
+			margin-top: 20vh;
+			position: fixed;
+			background: url(premium.png);
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 12vw;
+			height: 17vh;
+			border-radius: 1.55vw;
+			animation: einstein 3s;
+		}
+		#premium:hover{
+			cursor: pointer;
+		}
+		@keyframes einstein {
+			0%{
+				opacity: 0;
+				transform: translateX(-100%) translateY(100%);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0%) translateY(0%);
+			}
+		}
+		@keyframes typing {
+			from {width: 0}
+		}
+		@keyframes blink {
+			50% { border-color:transparent; }
+		}#span2{
+			position: absolute;
+			font-family: monospace;
+			white-space: nowrap;
+			width: 58.5ch;
+			color: #fff;
+			font-size: 2vw;
+			margin-top: -21vh;
+			margin-left: -17vw;
+			background-color: #999;
+			animation: typing 3s steps(72);
+			overflow: hidden;
+		}
+		#span3{
+			font-family: monospace;
+			white-space: nowrap;
+			border-right: 4px solid;
+			width: 36.5ch;
+			color: #fff;
+			font-size: 2vw;
+			margin-top: -16vh;
+			margin-left: -17vw;
+			background-color: #999;
+			animation: typing 3s steps(36),
+			blink .5s infinite step-end alternate;
+			overflow: hidden;
+		}
+		#span4{
+			border-radius: 5vh;
+			position: fixed;
+			white-space: nowrap;
+			width: 10ch;
+			color: #fff;
+			font-size: 3vw;
+			margin-top: 27.8vh;
+			margin-left: -18vw;
+			background-color: #000;
+			animation: atte 2s;
+			overflow: hidden;
+		}
+		@keyframes atte {
+			0%{
+				background: transparent;
+				color: transparent;
+			}
+			50%{
+				background: transparent;
+				color: transparent;
+			}
+			100%{
+				background: #000;
+				color: #fff;
+			}
+		}
+		.ventanas{
+			overflow: auto;
+			border-radius: 2vw;
+			border: .8vw;
+			border-color: #fff;
+			border-style: groove;
+			position: absolute;
+			margin-left: -.5vw;
+			margin-top: 27.7vh;
+			animation: ventanas 2s linear 2s infinite alternate;
+			width: 98.2vw;
+			height: 67.7vh;
+			background: linear-gradient(217deg,	rgba(0, 176, 240, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(0, 237, 251, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0) 100%);
+		}
+		@keyframes ventanas{
+			0%{
+				background: linear-gradient(217deg,	rgba(0, 176, 240, 1),	rgba(255, 0, 0, 0) 70.71%),
+							linear-gradient(127deg, rgba(0, 237, 251, 1), rgba(0, 255, 0, 0) 70.71%),
+							linear-gradient(336deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0) 100%);
+			}
+			50%{
+				background: linear-gradient(217deg,	rgba(255, 255, 255, 1),	rgba(255, 0, 0, 0) 70.71%),
+							linear-gradient(127deg, rgba(0, 176, 240, 1), rgba(0, 255, 0, 0) 70.71%),
+							linear-gradient(336deg, rgba(0, 237, 251, 1), rgba(0, 0, 255, 0) 100%);
+			}
+			100%{
+				background: linear-gradient(217deg,	rgba(0, 237, 251, 1),	rgba(255, 0, 0, 0) 70.71%),
+							linear-gradient(127deg, rgba(255, 255, 255, 1), rgba(0, 255, 0, 0) 70.71%),
+							linear-gradient(336deg, rgba(0, 176, 240, 1), rgba(0, 0, 255, 0) 100%);
+			}
+		}
+		.ventanas::-webkit-scrollbar{
+			background: linear-gradient(#0B1052, #00B0F0, #0B1052);
+			width: 14px;
+		}
+		.ventanas::-webkit-scrollbar-thumb{
+			background: radial-gradient(#00A2E8, #fff);
+			border-radius: 5px;
+		}
+		#introduccion::-webkit-scrollbar{
+			background: linear-gradient(#0B1052, #00B0F0, #0B1052);
+			width: 14px;
+		}
+		#introduccion::-webkit-scrollbar-thumb{
+			background: radial-gradient(#FA0A0A, #8D0101);
+			border-radius: 5px;
+		}
+	</style>
+	<!---------------------------------------Introducción------------------------------------>
+	<style type="text/css">
+		#img1-intro{
+			animation: entrada1 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		@keyframes entrada1{
+			0%{
+				transform: translateX(-100%) translateY(-100%);
+				opacity: 0;
+			}
+			100%{
+				oopacity: 0;
+				transform: translateX(0);
+			}
+		}
+		.intro-h1{
+			margin-left: 13vw;
+			font-size: 3vw;
+			color: #FA0A0A;
+			text-shadow: 5px 5px 0 #8D0101;
+			animation: titulo 4s;
+			animation-iteration-count: 1;
+		}
+		.intro2-h1{
+			margin-left: 70vw;
+			font-size: 3vw;
+			color: #FA0A0A;
+			text-shadow: 5px 5px 0 #8D0101;
+			animation: titulo 4s;
+			animation-iteration-count: 1;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+		}
+		@keyframes titulo {
+			0%{
+				color: transparent;
+				text-shadow: 5px 5px 0 transparent;
+			}
+			50%{
+				color: #FA0A0A;
+			}
+			100%{
+				text-shadow: 5px 5px 0 #8D0101;
+			}
+		}
+		.parrafos{
+			font-size: 1.7vw;
+		}
+		#parrafo1-intro{
+			animation: entrada2 3.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		@keyframes entrada2{
+			0%{
+				transform: translateX(100%);
+				opacity: 0;
+			}
+			100%{
+				oopacity: 0;
+				transform: translateX(0);
+			}
+		}
+		td{
+			padding: 2vw;
+		}
+	</style>
+	<!------------------------------------------Temas---------------------------------------->
+	<style type="text/css">
+			.temasventanas{
+				overflow: auto;
+				position: absolute;
+				margin-left: -.5vw;
+				margin-top: -1.1vh;
+				animation-name: temasventanas;
+				animation-duration: 5s;
+				animation-iteration-count: 1;
+				animation-play-state: running;
+				animation-direction: alternate-reverse;
+				animation-timing-function: linear;
+				width: 100vw;
+				height: 100vh;
+				background: linear-gradient(217deg,	rgba(0, 176, 240, 1),	rgba(255, 0, 0, 0) 70.71%),
+							linear-gradient(127deg, rgba(0, 237, 251, 1), rgba(0, 255, 0, 0) 70.71%),
+							linear-gradient(336deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0) 100%);
+			}
+			@keyframes temasventanas{
+				0%{
+					background: linear-gradient(217deg,	rgba(0, 176, 240, 1),	rgba(255, 0, 0, 0) 70.71%),
+								linear-gradient(127deg, rgba(0, 237, 251, 1), rgba(0, 255, 0, 0) 70.71%),
+								linear-gradient(336deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0) 100%);
+				}
+				50%{
+					background: linear-gradient(217deg,	rgba(255, 255, 255, 1),	rgba(255, 0, 0, 0) 70.71%),
+								linear-gradient(127deg, rgba(0, 176, 240, 1), rgba(0, 255, 0, 0) 70.71%),
+								linear-gradient(336deg, rgba(0, 237, 251, 1), rgba(0, 0, 255, 0) 100%);
+				}
+				100%{
+					background: linear-gradient(217deg,	rgba(0, 237, 251, 1),	rgba(255, 0, 0, 0) 70.71%),
+								linear-gradient(127deg, rgba(255, 255, 255, 1), rgba(0, 255, 0, 0) 70.71%),
+								linear-gradient(336deg, rgba(0, 176, 240, 1), rgba(0, 0, 255, 0) 100%);
+				}
+			}
+			.temasventanas::-webkit-scrollbar{
+				background: linear-gradient(#0B1052, #00B0F0, #0B1052);
+				width: 14px;
+			}
+			.temasventanas::-webkit-scrollbar-thumb{
+				background: radial-gradient(#0303FF, #FCFC03);
+				border-radius: 5px;
+			}
+		.subventanas{
+			background: #fff;
+			width: 98.19vw;
+			height: 74.6vh;
+			border-color: #000;
+			border-radius: 1vw;
+			border-width: .9vw;
+			border-style: groove;
+		}
+		.regresaratemasmuchos{
+			margin-top: 1.2vh;
+			margin-left: .5vw;
+			background: url(regresar1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: absolute;
+			width: 8.5vw;
+			height: 16.8vh;
+			border: 0;
+		}
+		.regresaratemasmuchos:hover{
+			background: url(regresar2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			cursor: pointer;
+			opacity: 1;
+		}
+		.ventanas2::-webkit-scrollbar{
+			background: linear-gradient(#0B1052, #00B0F0, #0B1052);
+			width: 14px;
+		}
+		.ventanas2::-webkit-scrollbar-thumb{
+			background: radial-gradient(#0303FF, #FCFC03);
+			border-radius: 5px;
+		}
+		.pointer:hover{
+			cursor: pointer;
+		}
+		#a{
+			margin-top: 7vh;
+			margin-left: .6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			border-radius: .7vw;
+			font-size: 2vw;
+			font-family: Forte;
+			box-shadow: 10px 10px 10px 5px #000;
+			animation: entradabotones 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}	
+		#a:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-name: borde;
+			cursor: pointer;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#b{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 7vh;
+			margin-left: 12.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#b:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#c{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 7vh;
+			margin-left: 24.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2.5vw;
+			font-family: Forte;
+			animation: entradabotones 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#c:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.6vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#d{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 7vh;
+			margin-left: 36.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#d:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#e{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 7vh;
+			margin-left: 48.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 1.7vw;
+			font-family: Forte;
+			animation: entradabotones2 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#e:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 1.8vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#f{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 7vh;
+			margin-left: 60.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones2 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#f:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#g{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 7vh;
+			margin-left: 72.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones2 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#g:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#h{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 7vh;
+			margin-left: 84.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones2 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#h:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#i{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: .6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 1.8vw;
+			font-family: Forte;
+			animation: entradabotones3 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#i:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 1.9vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#j{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: 12.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones3 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#j:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#k{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: 24.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones3 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#k:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#l{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: 36.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones3 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#l:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#m{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: 48.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 1.8vw;
+			font-family: Forte;
+			animation: entradabotones4 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#m:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 1.9vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#n{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: 60.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2vw;
+			font-family: Forte;
+			animation: entradabotones4 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#n:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.2vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#o{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: 72.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 2.5vw;
+			font-family: Forte;
+			animation: entradabotones4 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#o:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 2.7vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		#p{
+			box-shadow: 10px 10px 10px 5px #000;
+			margin-top: 38vh;
+			margin-left: 84.6vw;
+			position: absolute;
+			width: 11.6vw;
+			height: 27vh;
+			border-radius: .7vw;
+			background: linear-gradient(#2E303B,#2A2C38,#1F202B);
+			color: #fff;
+			font-size: 1.7vw;
+			font-family: Forte;
+			animation: entradabotones4 1.5s;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+		}
+		#p:hover{
+			color: #fff;
+			background: url(a.gif);
+			background-position: center;
+			background-size: 190%;
+			font-size: 1.8vw;
+			animation: borde;
+			box-shadow: 10px 10px 7.5px 2px #222;
+			animation-duration: .8s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate;
+			animation-timing-function: linear;
+			border-color: #fff;
+			border-radius: 1.2Vw;
+			border-style: double;
+			border-width: 1vh;
+		}
+		@keyframes borde{
+				0%{
+					border-color: #888;
+					border-radius: .5vw;
+					border-style: double;
+					border-width: 1vh;
+				}
+				25%{
+					border-color: #aaa;
+					border-radius: .7vw;
+					border-style: double;
+					border-width: 1vh;
+				}
+				50%{
+					border-color: #ccc;
+					border-radius: .9vw;
+					border-style: double;
+					border-width: 1vh;
+				}
+				75%{
+					border-color: #ddd;
+					border-radius: 1vw;
+					border-style: double;
+					border-width: 1vh;
+				
+				}
+				100%{
+					border-color: #fff;
+					border-radius: 1.2Vw;
+					border-style: double;
+					border-width: 1vh;
+				}
+			}
+		@keyframes entradabotones{
+			0%{
+				transform: translateX(-10%) translateY(-10%);
+				opacity: 0;
+			}
+			100%{
+				oopacity: 0;
+				transform: translateX(0);
+			}
+		}
+		@keyframes entradabotones2{
+			0%{
+				transform: translateX(10%) translateY(-10%);
+				opacity: 0;
+			}
+			100%{
+				oopacity: 0;
+				transform: translateX(0);
+			}
+		}
+		@keyframes entradabotones3{
+			0%{
+				transform: translateX(-10%) translateY(10%);
+				opacity: 0;
+			}
+			100%{
+				oopacity: 0;
+				transform: translateX(0);
+			}
+		}
+		@keyframes entradabotones4{
+			0%{
+				transform: translateX(10%) translateY(10%);
+				opacity: 0;
+			}
+			100%{
+				oopacity: 0;
+				transform: translateX(0);
+			}
+		}
+		.ventanas2{
+			overflow: auto;
+			position: absolute;
+			margin-left: -.5vw;
+			margin-top: -1.1vh;
+			animation: ventanas2 2s linear 2s infinite alternate;
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(217deg,	rgba(0, 176, 240, 1),	rgba(255, 0, 0, 0) 70.71%),
+						linear-gradient(127deg, rgba(0, 237, 251, 1), rgba(0, 255, 0, 0) 70.71%),
+						linear-gradient(336deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0) 100%);
+		}
+		@keyframes ventanas2{
+			0%{
+				background: linear-gradient(217deg,	rgba(0, 176, 240, 1),	rgba(255, 0, 0, 0) 70.71%),
+							linear-gradient(127deg, rgba(0, 237, 251, 1), rgba(0, 255, 0, 0) 70.71%),
+							linear-gradient(336deg, rgba(255, 255, 255, 1), rgba(0, 0, 255, 0) 100%);
+			}
+			50%{
+				background: linear-gradient(217deg,	rgba(255, 255, 255, 1),	rgba(255, 0, 0, 0) 70.71%),
+							linear-gradient(127deg, rgba(0, 176, 240, 1), rgba(0, 255, 0, 0) 70.71%),
+							linear-gradient(336deg, rgba(0, 237, 251, 1), rgba(0, 0, 255, 0) 100%);
+			}
+			100%{
+				background: linear-gradient(217deg,	rgba(0, 237, 251, 1),	rgba(255, 0, 0, 0) 70.71%),
+							linear-gradient(127deg, rgba(255, 255, 255, 1), rgba(0, 255, 0, 0) 70.71%),
+							linear-gradient(336deg, rgba(0, 176, 240, 1), rgba(0, 0, 255, 0) 100%);
+			}
+		}
+		.header{
+			background: url(header.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			height: 16.4vh;
+			width: 90vw;
+			margin-left: 9vw;
+			margin-top: 1vh;
+			margin-bottom: 0;
+			padding-top: 4vh;
+
+		}
+		.regresar{
+			margin-top: 1.2vh;
+			margin-left: .5vw;
+			background: url(regresar1.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: absolute;
+			width: 8.5vw;
+			height: 16.8vh;
+			border: 0;
+		}
+		.regresar:hover{
+			background: url(regresar2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			cursor: pointer;
+			opacity: 1;
+		}
+		#span1{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span12{
+			margin-left: 17vw;
+			width: 44vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(13),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span13{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span14{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span15{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span16{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span17{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span18{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span19{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span110{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span111{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span112{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span113{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span114{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span115{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span116{
+			margin-left: 17vw;
+			width: 40vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(12),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		@keyframes typing {
+			from {width: 0}
+		}
+		@keyframes blink {
+			50% { border-color:transparent; }
+		}
+		#span5{
+			margin-left: 17vw;
+			width: 42vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(11),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span6{
+			margin-left: 25vw;
+			width: 28vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(7),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span7{
+			margin-left: 7vw;
+			width: 72vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(18),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span8{
+			margin-left: 17vw;
+			width: 53vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(13),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span9{
+			margin-left: 5vw;
+			width: 73vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(18),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span10{
+			margin-left: 8vw;
+			width: 69vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(18),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span11{
+			margin-left: 13vw;
+			width: 60vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(15),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span22{
+			margin-left: 4vw;
+			width: 82vw;
+			font-size: 2.8vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(24),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span23{
+			margin-left: 12vw;
+			width: 58vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(14),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span24{
+			margin-left: 15vw;
+			width: 60vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(15),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span25{
+			margin-left: 15vw;
+			width: 63vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(15),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span26{
+			margin-left: 7vw;
+			width: 75vw;
+			font-size: 2.8vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(23),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span27{
+			margin-left: 12vw;
+			width: 65vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(16),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span28{
+			margin-left: 28vw;
+			width: 22vw;
+			font-size: 3.2vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(6),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		#span29{
+			margin-left: 7vw;
+			width: 77vw;
+			font-size: 2.8vw;
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			color: #fff;
+			border-right: .4vw solid;
+			animation: typing 1s steps(23),
+			blink .5s infinite step-end alternate;
+			-webkit-text-stroke: 1.5px black;
+			overflow: hidden;
+		}
+		span.one{
+			margin-left: -6vw;
+				animation-name: enumeracion1;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-play-state: running;
+				animation-direction: alternate;
+				animation-timing-function: linear;
+				text-align:center;
+				font-family: impact;
+				letter-spacing: 0;
+				border-radius: 100vw;
+				-moz-border-radius: 100vw;
+				-webkit-border-radius: 100vw;
+				display: inline-block;
+				font-weight: bold;
+				text-align: center;
+			}
+			span.two{
+				margin-left: -6vw;
+				animation-name: enumeracion2;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-play-state: running;
+				animation-direction: alternate;
+				animation-timing-function: linear;
+				text-align:center;
+				font-family: impact;
+				letter-spacing: 0;
+				border-radius: 100vw;
+				-moz-border-radius: 100vw;
+				-webkit-border-radius: 100vw;
+				display: inline-block;
+				font-weight: bold;
+				text-align: center;
+			}
+			@keyframes enumeracion1{
+				0%{
+					background: linear-gradient(#0ff,#00f);
+					line-height: 4vw;
+					margin-right: 1vw;
+					width: 4vw;
+					-webkit-box-shadow: 3vh 2vh 1vh 0vh rgba(50, 50, 50, 0.75);
+					-moz-box-shadow:    3vh 2vh 1vh 0vh rgba(50, 50, 50, 0.75);
+					box-shadow:         3vh 2vh 1vh 0vh rgba(50, 50, 50, 0.75);
+					color: #ff0;
+					font-size: 2.8vw;
+					text-shadow: -3px -3px 3px #0000DF, 3px -3px 3px #0000DF, -3px 3px 3px #0000DF, 3px 3px 3px #0000DF;
+				}
+				100%{
+					background: linear-gradient(#fff,#0ff);
+					line-height: 3.5vw;
+					margin-right: 1vw;
+					width: 3.5vw;
+					-webkit-box-shadow: 1vh 1vh .3vh 0vh rgba(50, 50, 50, 0.75);
+					-moz-box-shadow:    1vh 1vh .3vh 0vh rgba(50, 50, 50, 0.75);
+					box-shadow:         1vh 1vh .3vh 0vh rgba(50, 50, 50, 0.75);
+					color: #00f;
+					font-size: 2.6vw;
+					text-shadow: -3px -3px 3px #ff0, 3px -3px 3px #ff0, -3px 3px 3px #ff0, 3px 3px 3px #ff0;
+				}
+			}
+			@keyframes enumeracion2{
+				0%{
+					background: linear-gradient(#fff,#0ff);
+					line-height: 3.5vw;
+					margin-right: 1vw;
+					width: 3.5vw;
+					-webkit-box-shadow: 1vh 1vh .3vh 0vh rgba(50, 50, 50, 0.75);
+					-moz-box-shadow:    1vh 1vh .3vh 0vh rgba(50, 50, 50, 0.75);
+					box-shadow:         1vh 1vh .3vh 0vh rgba(50, 50, 50, 0.75);
+					color: #00f;
+					font-size: 2.6vw;
+					text-shadow: -3px -3px 3px #ff0, 3px -3px 3px #ff0, -3px 3px 3px #ff0, 3px 3px 3px #ff0;
+				}
+				100%{
+					background: linear-gradient(#0ff,#00f);
+					line-height: 4vw;
+					margin-right: 1vw;
+					width: 4vw;
+					-webkit-box-shadow: 3vh 2vh 1vh 0vh rgba(50, 50, 50, 0.75);
+					-moz-box-shadow:    3vh 2vh 1vh 0vh rgba(50, 50, 50, 0.75);
+					box-shadow:         3vh 2vh 1vh 0vh rgba(50, 50, 50, 0.75);
+					color: #ff0;
+					font-size: 2.8vw;
+					text-shadow: -3px -3px 3px #0000DF, 3px -3px 3px #0000DF, -3px 3px 3px #0000DF, 3px 3px 3px #0000DF;
+				}
+			}
+			.uno{
+				padding-right: 1.3vw;
+				padding-left: 1.3vw;
+				display: table-cell;
+				vertical-align: middle;
+				margin-left: 6vw;
+				width: 90vw;
+				height: 7vh;
+				animation-name: contenido1;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-play-state: running;
+				animation-direction: alternate;
+				animation-timing-function: linear;
+			}
+			.uno:hover{
+				text-decoration: overline;
+				text-decoration-color: #0fb;
+				color: #0f0;
+				cursor: pointer;
+				text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+			}
+			@keyframes contenido1{
+				100%{
+					background-color: #FCFF9F;
+					border-radius: 100vw;
+					border-style: groove;
+					border-width: .3vw;
+					border-color: #00f;
+				}
+				0%{
+					background-color: #A0FEFF;
+					border-radius: 100vw;
+					border-style: groove;
+					border-width: .3vw;
+					border-color: #ff0;
+				}
+			}
+			.dos{
+				padding-right: 1.3vw;
+				padding-left: 1.3vw;
+				display: table-cell;
+				vertical-align: middle;
+				margin-left: 6vw;
+				width: 90vw;
+				height: 7vh;
+				animation-name: contenido2;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-play-state: running;
+				animation-direction: alternate;
+				animation-timing-function: linear;
+			}
+			.dos:hover{
+				text-decoration: overline;
+				text-decoration-color: #0fb;
+				color: #0f0;
+				cursor: pointer;
+				text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+			}
+			@keyframes contenido2{
+				0%{
+					background-color: #FCFF9F;
+					border-radius: 100vw;
+					border-style: groove;
+					border-width: .3vw;
+					border-color: #00f;
+				}
+				100%{
+					background-color: #A0FEFF;
+					border-radius: 100vw;
+					border-style: groove;
+					border-width: .3vw;
+					border-color: #ff0;
+				}
+			}
+	</style>
+	<!--.....................................Aritmetica....................................-->
+	<section>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,Sistema de Numeracion Decimal,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader1{
+				margin-left: 4vw;
+				width: 83vw;
+				font-size: 2.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(29),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,Valor Posicional y no Posicional,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader2{
+				margin-left: 3vw;
+				width: 84vw;
+				font-size: 2.44vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(32),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Conjuntos,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader3{
+				margin-left: 23vw;
+				width: 37vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(9),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,Propiedades de los Conjuntos,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader4{
+				margin-left: 4vw;
+				width: 82vw;
+				font-size: 2.67vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(28),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,Propiedades de la igualdad desigualdad,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader5{
+				margin-top: 1.5vh;
+				margin-left: 3vw;
+				width: 84vw;
+				font-size: 2vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(38),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,7 Operaciones Basicas,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader6{
+				margin-left: 9vw;
+				width: 71vw;
+				font-size: 3.2vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(21),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Fracciones,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader7{
+				margin-left: 20vw;
+				width: 43vw;
+				font-size: 3.7vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(10),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Unidades de Medida,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader8{
+				margin-left: 7vw;
+				width: 70vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(18),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sistemas de Numeracion,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader9{
+				margin-left: 5vw;
+				width: 80.2vw;
+				font-size: 3.2vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(22),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Campo de Numeros,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader10{
+				margin-left: 10vw;
+				width: 65vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(16),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Multiplos y Divisores,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader11{
+				margin-left: 4vw;
+				width: 82vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(21),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Numeros Primos,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader12{
+				margin-left: 15vw;
+				width: 59vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(14),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Factorizacion,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader13{
+				margin-left: 17vw;
+				width: 54vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(13),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,Minimo Comun Multiplo y Maximo Comun Divisor,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader14{
+				margin-top: 2vh;
+				margin-left: 3.5vw;
+				width: 84vw;
+				font-size: 1.65vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(44),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Porcentajes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader15{
+				margin-left: 20vw;
+				width: 45.5vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(11),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Proporciones,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader16{
+				margin-left: 18vw;
+				width: 50vw;
+				font-size: 3.5vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(12),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+		<!--,,,,,,,,,,,,,,,,,,,,,,,,Operaciones con Numeros Racionales,,,,,,,,,,,,,,,,,,,,,-->
+		<style type="text/css">
+			.spanheader17{
+				margin-top: 1.5vh;
+				margin-left: 3.5vw;
+				width: 82vw;
+				font-size: 2.148vw;
+				display: block;
+				font-family: monospace;
+				white-space: nowrap;
+				color: #fff;
+				border-right: .4vw solid;
+				animation: typing 1s steps(34),
+				blink .5s infinite step-end alternate;
+				-webkit-text-stroke: 1.5px black;
+				overflow: hidden;
+			}
+		</style>
+	</section>
+	<!-------------------------------------Planes de Estudio--------------------------------->
+	<style type="text/css">
+	
+	</style>
+	<!-------------------------------------Tips y Trucos------------------------------------->
+	<style type="text/css">
+	
+	</style>
+	<!------------------------------------Datos curiosos------------------------------------->
+	<style type="text/css">
+	
+	</style>
+	<!------------------------------------Historiografía------------------------------------->
+	<style type="text/css">
+	
+	</style>
+	<!-----------------------------------Calculo Mental-------------------------------------->
+	<style type="text/css">
+	
+	</style>
+	<!---------------------------------------Libros------------------------------------------>
+	<style type="text/css">
+	
+	</style>
+</section>
+<!--___________________________________________Javascript_____________________________________________________-->
+<section>
+	<!----------------------------------Siguiente - Javascript------------------------------->
+	<script type="text/javascript">
+		function siguiente(){
+			document.getElementById('menu').style.display = 'block';
+			document.getElementById('menu1').style.display = 'block';
+			document.getElementById('inicio').style.display = 'none';
+			document.getElementById('siguiente').style.display = 'none';
+			document.getElementById('premium').style.display = 'block';
+			document.getElementById('einstein').style.display = 'block';
+			document.getElementById('span2').style.display = 'block';
+			document.getElementById('span3').style.display = 'block';
+			document.getElementById('span4').style.display = 'block';
+		}
+		function regresaratemas(){
+			document.getElementById('temas').style.display = 'block';
+			document.getElementById('menu').style.display = 'block';
+			document.getElementById('menu1').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+			document.getElementById('bv').style.display = 'none';
+			document.getElementById('cv').style.display = 'none';
+			document.getElementById('dv').style.display = 'none';
+			document.getElementById('ev').style.display = 'none';
+			document.getElementById('fv').style.display = 'none';
+			document.getElementById('gv').style.display = 'none';
+			document.getElementById('hv').style.display = 'none';
+			document.getElementById('iv').style.display = 'none';
+			document.getElementById('jv').style.display = 'none';
+			document.getElementById('kv').style.display = 'none';
+			document.getElementById('lv').style.display = 'none';
+			document.getElementById('mv').style.display = 'none';
+			document.getElementById('nv').style.display = 'none';
+			document.getElementById('ov').style.display = 'none';
+			document.getElementById('pv').style.display = 'none';
+		}
+	</script>
+	<!-----------------------------------Regresar - Javascript------------------------------->
+	<script type="text/javascript">
+		function regresar(){
+			document.getElementById('menu').style.display = 'block';
+			document.getElementById('menu1').style.display = 'block';
+			document.getElementById('inicio').style.display = 'none';
+		}
+		function regresararitmetica(){
+			document.getElementById('av').style.display = 'block';
+			document.getElementById('tema1').style.display = 'none';
+			document.getElementById('tema2').style.display = 'none';
+			document.getElementById('tema3').style.display = 'none';
+			document.getElementById('tema4').style.display = 'none';
+			document.getElementById('tema5').style.display = 'none';
+			document.getElementById('tema6').style.display = 'none';
+			document.getElementById('tema7').style.display = 'none';
+			document.getElementById('tema8').style.display = 'none';
+			document.getElementById('tema9').style.display = 'none';
+			document.getElementById('tema10').style.display = 'none';
+			document.getElementById('tema11').style.display = 'none';
+			document.getElementById('tema12').style.display = 'none';
+			document.getElementById('tema13').style.display = 'none';
+			document.getElementById('tema14').style.display = 'none';
+			document.getElementById('tema15').style.display = 'none';
+			document.getElementById('tema16').style.display = 'none';
+			document.getElementById('tema17').style.display = 'none';
+		}
+	</script>
+	<!---------------------------------------Menu - Javascript------------------------------->
+	<script type="text/javascript">
+		function inicio(){
+			document.getElementById('einstein').style.display = 'block';
+			document.getElementById('span2').style.display = 'block';
+			document.getElementById('span3').style.display = 'block';
+			document.getElementById('span4').style.display = 'block';
+			document.getElementById('premium').style.display = 'block';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function introduccion(){
+			document.getElementById('introduccion').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function temas(){
+			document.getElementById('temas').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function planesdeestudio(){
+			document.getElementById('planesdeestudio').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function tipsytrucos(){
+			document.getElementById('tipsytrucos').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function datoscuriosos(){
+			document.getElementById('datoscuriosos').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function historiografia(){
+			document.getElementById('historiografia').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function calculomental(){
+			document.getElementById('calculomental').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('libros').style.display = 'none';
+		}
+		function libros(){
+			document.getElementById('libros').style.display = 'block';
+			document.getElementById('einstein').style.display = 'none';
+			document.getElementById('span2').style.display = 'none';
+			document.getElementById('span3').style.display = 'none';
+			document.getElementById('span4').style.display = 'none';
+			document.getElementById('premium').style.display = 'none';
+			document.getElementById('introduccion').style.display = 'none';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('planesdeestudio').style.display = 'none';
+			document.getElementById('tipsytrucos').style.display = 'none';
+			document.getElementById('datoscuriosos').style.display = 'none';
+			document.getElementById('historiografia').style.display = 'none';
+			document.getElementById('calculomental').style.display = 'none';
+		}
+	</script>
+	<!--------------------------------------Temas - Javascript------------------------------->
+	<script type="text/javascript">
+		function a(){
+			document.getElementById('av').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function b(){
+			document.getElementById('bv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function c(){
+			document.getElementById('cv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function d(){
+			document.getElementById('dv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function e(){
+			document.getElementById('ev').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function f(){
+			document.getElementById('fv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function g(){
+			document.getElementById('gv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function h(){
+			document.getElementById('hv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function i(){
+			document.getElementById('iv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function j(){
+			document.getElementById('jv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function k(){
+			document.getElementById('kv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function l(){
+			document.getElementById('lv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function m(){
+			document.getElementById('mv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function n(){
+			document.getElementById('nv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function o(){
+			document.getElementById('ov').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function p(){
+			document.getElementById('pv').style.display = 'block';
+			document.getElementById('temas').style.display = 'none';
+			document.getElementById('menu').style.display = 'none';
+			document.getElementById('menu1').style.display = 'none';
+		}
+		function tema1(){
+			document.getElementById('tema1').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema2(){
+			document.getElementById('tema2').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema3(){
+			document.getElementById('tema3').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema4(){
+			document.getElementById('tema4').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema5(){
+			document.getElementById('tema5').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema6(){
+			document.getElementById('tema6').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema7(){
+			document.getElementById('tema7').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema8(){
+			document.getElementById('tema8').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema9(){
+			document.getElementById('tema9').style.display = 'block';
+
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema10(){
+			document.getElementById('tema10').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema11(){
+			document.getElementById('tema11').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema12(){
+			document.getElementById('tema12').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema13(){
+			document.getElementById('tema13').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema14(){
+			document.getElementById('tema14').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema15(){
+			document.getElementById('tema15').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema16(){
+			document.getElementById('tema16').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+		function tema17(){
+			document.getElementById('tema17').style.display = 'block';
+			document.getElementById('av').style.display = 'none';
+		}
+	</script>
+</section>
